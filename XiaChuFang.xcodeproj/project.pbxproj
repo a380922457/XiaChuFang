@@ -1,0 +1,733 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B87E09403C0AB1AFFEAACF76 /* Pods_XiaChuFang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBA99A9F3C9F525CCA5172D /* Pods_XiaChuFang.framework */; };
+		CB196E1324D123B400A643E1 /* HMHomeFollowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1224D123B400A643E1 /* HMHomeFollowController.swift */; };
+		CB196E1624D1244200A643E1 /* HMHomeFollowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1424D1244200A643E1 /* HMHomeFollowCell.swift */; };
+		CB196E1724D1244200A643E1 /* HMHomeFollowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB196E1524D1244200A643E1 /* HMHomeFollowCell.xib */; };
+		CB196E1924D151AA00A643E1 /* HMHomeVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1824D151AA00A643E1 /* HMHomeVideoController.swift */; };
+		CB196E1B24D15FCA00A643E1 /* HMHomeFollowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1A24D15FCA00A643E1 /* HMHomeFollowModel.swift */; };
+		CB196E1D24D15FDB00A643E1 /* HMHomeFollowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1C24D15FDB00A643E1 /* HMHomeFollowViewModel.swift */; };
+		CB40AA8F24D1128A0082F560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AA8E24D1128A0082F560 /* AppDelegate.swift */; };
+		CB40AA9124D1128A0082F560 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AA9024D1128A0082F560 /* SceneDelegate.swift */; };
+		CB40AA9824D1128B0082F560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB40AA9724D1128B0082F560 /* Assets.xcassets */; };
+		CB40AA9B24D1128B0082F560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB40AA9924D1128B0082F560 /* LaunchScreen.storyboard */; };
+		CB40AAD724D113740082F560 /* MarketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAA624D113730082F560 /* MarketController.swift */; };
+		CB40AAD824D113740082F560 /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAAC24D113730082F560 /* MineController.swift */; };
+		CB40AAD924D113740082F560 /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAB224D113730082F560 /* GroupController.swift */; };
+		CB40AADA24D113740082F560 /* HMPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAB524D113730082F560 /* HMPageView.swift */; };
+		CB40AADB24D113740082F560 /* HMPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAB624D113730082F560 /* HMPageTitleView.swift */; };
+		CB40AADC24D113740082F560 /* HMPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAB724D113730082F560 /* HMPageStyle.swift */; };
+		CB40AADD24D113740082F560 /* HMPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAB824D113730082F560 /* HMPageContentView.swift */; };
+		CB40AADE24D113740082F560 /* HMPageCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAB924D113730082F560 /* HMPageCollectionViewFlowLayout.swift */; };
+		CB40AADF24D113740082F560 /* HMHomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AABE24D113730082F560 /* HMHomeAPI.swift */; };
+		CB40AAE024D113740082F560 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAC024D113730082F560 /* HomeController.swift */; };
+		CB40AAE224D113740082F560 /* HMHomeRecController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAC224D113730082F560 /* HMHomeRecController.swift */; };
+		CB40AAE424D113740082F560 /* HMNavSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAC524D113730082F560 /* HMNavSearchView.swift */; };
+		CB40AAE524D113740082F560 /* HMNavSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB40AAC624D113730082F560 /* HMNavSearchView.xib */; };
+		CB40AAE724D113740082F560 /* const.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAC924D113730082F560 /* const.swift */; };
+		CB40AAE924D113740082F560 /* MyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AACB24D113730082F560 /* MyExtension.swift */; };
+		CB40AAEA24D113740082F560 /* HMTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AACD24D113730082F560 /* HMTabBarButton.swift */; };
+		CB40AAEB24D113740082F560 /* HMTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AACE24D113730082F560 /* HMTabBar.swift */; };
+		CB40AAEC24D113740082F560 /* HMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AACF24D113730082F560 /* HMNavigationController.swift */; };
+		CB40AAED24D113740082F560 /* HMTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAD024D113730082F560 /* HMTabbarController.swift */; };
+		CB40AAEE24D113740082F560 /* SubjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAD524D113730082F560 /* SubjectsController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5BBA99A9F3C9F525CCA5172D /* Pods_XiaChuFang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XiaChuFang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C8AF2E3F060D5BC7F2D8E95 /* Pods-XiaChuFang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaChuFang.release.xcconfig"; path = "Target Support Files/Pods-XiaChuFang/Pods-XiaChuFang.release.xcconfig"; sourceTree = "<group>"; };
+		9F6294BDC18DABAFAE39DA4F /* Pods-XiaChuFang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaChuFang.debug.xcconfig"; path = "Target Support Files/Pods-XiaChuFang/Pods-XiaChuFang.debug.xcconfig"; sourceTree = "<group>"; };
+		CB196E1224D123B400A643E1 /* HMHomeFollowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowController.swift; sourceTree = "<group>"; };
+		CB196E1424D1244200A643E1 /* HMHomeFollowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowCell.swift; sourceTree = "<group>"; };
+		CB196E1524D1244200A643E1 /* HMHomeFollowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMHomeFollowCell.xib; sourceTree = "<group>"; };
+		CB196E1824D151AA00A643E1 /* HMHomeVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeVideoController.swift; sourceTree = "<group>"; };
+		CB196E1A24D15FCA00A643E1 /* HMHomeFollowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowModel.swift; sourceTree = "<group>"; };
+		CB196E1C24D15FDB00A643E1 /* HMHomeFollowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowViewModel.swift; sourceTree = "<group>"; };
+		CB40AA8B24D1128A0082F560 /* 下厨房.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "下厨房.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB40AA8E24D1128A0082F560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB40AA9024D1128A0082F560 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CB40AA9724D1128B0082F560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB40AA9A24D1128B0082F560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB40AA9C24D1128B0082F560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB40AAA624D113730082F560 /* MarketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketController.swift; sourceTree = "<group>"; };
+		CB40AAAC24D113730082F560 /* MineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
+		CB40AAB224D113730082F560 /* GroupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
+		CB40AAB524D113730082F560 /* HMPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMPageView.swift; sourceTree = "<group>"; };
+		CB40AAB624D113730082F560 /* HMPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMPageTitleView.swift; sourceTree = "<group>"; };
+		CB40AAB724D113730082F560 /* HMPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMPageStyle.swift; sourceTree = "<group>"; };
+		CB40AAB824D113730082F560 /* HMPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMPageContentView.swift; sourceTree = "<group>"; };
+		CB40AAB924D113730082F560 /* HMPageCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMPageCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		CB40AABE24D113730082F560 /* HMHomeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMHomeAPI.swift; sourceTree = "<group>"; };
+		CB40AAC024D113730082F560 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		CB40AAC224D113730082F560 /* HMHomeRecController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMHomeRecController.swift; sourceTree = "<group>"; };
+		CB40AAC524D113730082F560 /* HMNavSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMNavSearchView.swift; sourceTree = "<group>"; };
+		CB40AAC624D113730082F560 /* HMNavSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMNavSearchView.xib; sourceTree = "<group>"; };
+		CB40AAC924D113730082F560 /* const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = const.swift; sourceTree = "<group>"; };
+		CB40AACB24D113730082F560 /* MyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyExtension.swift; sourceTree = "<group>"; };
+		CB40AACD24D113730082F560 /* HMTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMTabBarButton.swift; sourceTree = "<group>"; };
+		CB40AACE24D113730082F560 /* HMTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMTabBar.swift; sourceTree = "<group>"; };
+		CB40AACF24D113730082F560 /* HMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMNavigationController.swift; sourceTree = "<group>"; };
+		CB40AAD024D113730082F560 /* HMTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMTabbarController.swift; sourceTree = "<group>"; };
+		CB40AAD524D113730082F560 /* SubjectsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB40AA8824D1128A0082F560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B87E09403C0AB1AFFEAACF76 /* Pods_XiaChuFang.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C96B51466C30EB21890F266 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F6294BDC18DABAFAE39DA4F /* Pods-XiaChuFang.debug.xcconfig */,
+				7C8AF2E3F060D5BC7F2D8E95 /* Pods-XiaChuFang.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		839438BA219DF0CD019206DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BBA99A9F3C9F525CCA5172D /* Pods_XiaChuFang.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB40AA8224D1128A0082F560 = {
+			isa = PBXGroup;
+			children = (
+				CB40AA8D24D1128A0082F560 /* XiaChuFang */,
+				CB40AA8C24D1128A0082F560 /* Products */,
+				1C96B51466C30EB21890F266 /* Pods */,
+				839438BA219DF0CD019206DC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CB40AA8C24D1128A0082F560 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AA8B24D1128A0082F560 /* 下厨房.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB40AA8D24D1128A0082F560 /* XiaChuFang */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AABA24D113730082F560 /* 首页 */,
+				CB40AAA224D113730082F560 /* 市集 */,
+				CB40AAD124D113730082F560 /* 书影音 */,
+				CB40AAA824D113730082F560 /* 我的 */,
+				CB40AAAE24D113730082F560 /* 小组 */,
+				CB40AAB424D113730082F560 /* HMPageVIew */,
+				CB40AACC24D113730082F560 /* Main */,
+				CB40AAC724D113730082F560 /* Other */,
+				CB40AA9724D1128B0082F560 /* Assets.xcassets */,
+				CB40AA9924D1128B0082F560 /* LaunchScreen.storyboard */,
+				CB40AA9C24D1128B0082F560 /* Info.plist */,
+			);
+			path = XiaChuFang;
+			sourceTree = "<group>";
+		};
+		CB40AAA224D113730082F560 /* 市集 */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAA324D113730082F560 /* ViewModels */,
+				CB40AAA424D113730082F560 /* Classes */,
+				CB40AAA524D113730082F560 /* Controllers */,
+				CB40AAA724D113730082F560 /* Views */,
+			);
+			path = "市集";
+			sourceTree = "<group>";
+		};
+		CB40AAA324D113730082F560 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CB40AAA424D113730082F560 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CB40AAA524D113730082F560 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAA624D113730082F560 /* MarketController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB40AAA724D113730082F560 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB40AAA824D113730082F560 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAA924D113730082F560 /* ViewModels */,
+				CB40AAAA24D113730082F560 /* Classes */,
+				CB40AAAB24D113730082F560 /* Controllers */,
+				CB40AAAD24D113730082F560 /* Views */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		CB40AAA924D113730082F560 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CB40AAAA24D113730082F560 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CB40AAAB24D113730082F560 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAAC24D113730082F560 /* MineController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB40AAAD24D113730082F560 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB40AAAE24D113730082F560 /* 小组 */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAAF24D113730082F560 /* ViewModels */,
+				CB40AAB024D113730082F560 /* Classes */,
+				CB40AAB124D113730082F560 /* Controllers */,
+				CB40AAB324D113730082F560 /* Views */,
+			);
+			path = "小组";
+			sourceTree = "<group>";
+		};
+		CB40AAAF24D113730082F560 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CB40AAB024D113730082F560 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CB40AAB124D113730082F560 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAB224D113730082F560 /* GroupController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB40AAB324D113730082F560 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB40AAB424D113730082F560 /* HMPageVIew */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAB524D113730082F560 /* HMPageView.swift */,
+				CB40AAB624D113730082F560 /* HMPageTitleView.swift */,
+				CB40AAB724D113730082F560 /* HMPageStyle.swift */,
+				CB40AAB824D113730082F560 /* HMPageContentView.swift */,
+				CB40AAB924D113730082F560 /* HMPageCollectionViewFlowLayout.swift */,
+			);
+			path = HMPageVIew;
+			sourceTree = "<group>";
+		};
+		CB40AABA24D113730082F560 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AABB24D113730082F560 /* ViewModels */,
+				CB40AABC24D113730082F560 /* Classes */,
+				CB40AABD24D113730082F560 /* API */,
+				CB40AABF24D113730082F560 /* Controllers */,
+				CB40AAC424D113730082F560 /* Views */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		CB40AABB24D113730082F560 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CB196E1A24D15FCA00A643E1 /* HMHomeFollowModel.swift */,
+				CB196E1C24D15FDB00A643E1 /* HMHomeFollowViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CB40AABC24D113730082F560 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CB40AABD24D113730082F560 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AABE24D113730082F560 /* HMHomeAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CB40AABF24D113730082F560 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAC024D113730082F560 /* HomeController.swift */,
+				CB196E1224D123B400A643E1 /* HMHomeFollowController.swift */,
+				CB40AAC224D113730082F560 /* HMHomeRecController.swift */,
+				CB196E1824D151AA00A643E1 /* HMHomeVideoController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB40AAC424D113730082F560 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAC524D113730082F560 /* HMNavSearchView.swift */,
+				CB40AAC624D113730082F560 /* HMNavSearchView.xib */,
+				CB196E1424D1244200A643E1 /* HMHomeFollowCell.swift */,
+				CB196E1524D1244200A643E1 /* HMHomeFollowCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB40AAC724D113730082F560 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAC924D113730082F560 /* const.swift */,
+				CB40AACB24D113730082F560 /* MyExtension.swift */,
+				CB40AA8E24D1128A0082F560 /* AppDelegate.swift */,
+				CB40AA9024D1128A0082F560 /* SceneDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		CB40AACC24D113730082F560 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AACF24D113730082F560 /* HMNavigationController.swift */,
+				CB40AACD24D113730082F560 /* HMTabBarButton.swift */,
+				CB40AACE24D113730082F560 /* HMTabBar.swift */,
+				CB40AAD024D113730082F560 /* HMTabbarController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CB40AAD124D113730082F560 /* 书影音 */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAD224D113730082F560 /* ViewModels */,
+				CB40AAD324D113730082F560 /* Classes */,
+				CB40AAD424D113730082F560 /* Controllers */,
+				CB40AAD624D113740082F560 /* Views */,
+			);
+			path = "书影音";
+			sourceTree = "<group>";
+		};
+		CB40AAD224D113730082F560 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CB40AAD324D113730082F560 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CB40AAD424D113730082F560 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB40AAD524D113730082F560 /* SubjectsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB40AAD624D113740082F560 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB40AA8A24D1128A0082F560 /* XiaChuFang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB40AA9F24D1128B0082F560 /* Build configuration list for PBXNativeTarget "XiaChuFang" */;
+			buildPhases = (
+				1E10FE288B90A6C86132FD71 /* [CP] Check Pods Manifest.lock */,
+				CB40AA8724D1128A0082F560 /* Sources */,
+				CB40AA8824D1128A0082F560 /* Frameworks */,
+				CB40AA8924D1128A0082F560 /* Resources */,
+				7697C114C1082EEFA994DF2D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XiaChuFang;
+			productName = XiaChuFang;
+			productReference = CB40AA8B24D1128A0082F560 /* 下厨房.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB40AA8324D1128A0082F560 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "梁航铭";
+				TargetAttributes = {
+					CB40AA8A24D1128A0082F560 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = CB40AA8624D1128A0082F560 /* Build configuration list for PBXProject "XiaChuFang" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB40AA8224D1128A0082F560;
+			productRefGroup = CB40AA8C24D1128A0082F560 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB40AA8A24D1128A0082F560 /* XiaChuFang */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB40AA8924D1128A0082F560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB40AA9B24D1128B0082F560 /* LaunchScreen.storyboard in Resources */,
+				CB40AA9824D1128B0082F560 /* Assets.xcassets in Resources */,
+				CB196E1724D1244200A643E1 /* HMHomeFollowCell.xib in Resources */,
+				CB40AAE524D113740082F560 /* HMNavSearchView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E10FE288B90A6C86132FD71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XiaChuFang-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7697C114C1082EEFA994DF2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XiaChuFang/Pods-XiaChuFang-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XiaChuFang/Pods-XiaChuFang-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XiaChuFang/Pods-XiaChuFang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB40AA8724D1128A0082F560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB40AADE24D113740082F560 /* HMPageCollectionViewFlowLayout.swift in Sources */,
+				CB196E1D24D15FDB00A643E1 /* HMHomeFollowViewModel.swift in Sources */,
+				CB40AAD824D113740082F560 /* MineController.swift in Sources */,
+				CB40AAEE24D113740082F560 /* SubjectsController.swift in Sources */,
+				CB40AA8F24D1128A0082F560 /* AppDelegate.swift in Sources */,
+				CB40AADF24D113740082F560 /* HMHomeAPI.swift in Sources */,
+				CB40AAD724D113740082F560 /* MarketController.swift in Sources */,
+				CB40AAD924D113740082F560 /* GroupController.swift in Sources */,
+				CB196E1624D1244200A643E1 /* HMHomeFollowCell.swift in Sources */,
+				CB40AAEB24D113740082F560 /* HMTabBar.swift in Sources */,
+				CB196E1324D123B400A643E1 /* HMHomeFollowController.swift in Sources */,
+				CB40AADA24D113740082F560 /* HMPageView.swift in Sources */,
+				CB196E1B24D15FCA00A643E1 /* HMHomeFollowModel.swift in Sources */,
+				CB40AAE424D113740082F560 /* HMNavSearchView.swift in Sources */,
+				CB40AADD24D113740082F560 /* HMPageContentView.swift in Sources */,
+				CB40AAE224D113740082F560 /* HMHomeRecController.swift in Sources */,
+				CB40AAE024D113740082F560 /* HomeController.swift in Sources */,
+				CB40AAE724D113740082F560 /* const.swift in Sources */,
+				CB40AAEC24D113740082F560 /* HMNavigationController.swift in Sources */,
+				CB40AADB24D113740082F560 /* HMPageTitleView.swift in Sources */,
+				CB40AAED24D113740082F560 /* HMTabbarController.swift in Sources */,
+				CB40AAEA24D113740082F560 /* HMTabBarButton.swift in Sources */,
+				CB40AA9124D1128A0082F560 /* SceneDelegate.swift in Sources */,
+				CB40AADC24D113740082F560 /* HMPageStyle.swift in Sources */,
+				CB40AAE924D113740082F560 /* MyExtension.swift in Sources */,
+				CB196E1924D151AA00A643E1 /* HMHomeVideoController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CB40AA9924D1128B0082F560 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB40AA9A24D1128B0082F560 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB40AA9D24D1128B0082F560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB40AA9E24D1128B0082F560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB40AAA024D1128B0082F560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6294BDC18DABAFAE39DA4F /* Pods-XiaChuFang.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 36NRA493A7;
+				INFOPLIST_FILE = XiaChuFang/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lhm.XiaChuFang;
+				PRODUCT_NAME = "下厨房";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB40AAA124D1128B0082F560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C8AF2E3F060D5BC7F2D8E95 /* Pods-XiaChuFang.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 36NRA493A7;
+				INFOPLIST_FILE = XiaChuFang/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lhm.XiaChuFang;
+				PRODUCT_NAME = "下厨房";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB40AA8624D1128A0082F560 /* Build configuration list for PBXProject "XiaChuFang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB40AA9D24D1128B0082F560 /* Debug */,
+				CB40AA9E24D1128B0082F560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB40AA9F24D1128B0082F560 /* Build configuration list for PBXNativeTarget "XiaChuFang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB40AAA024D1128B0082F560 /* Debug */,
+				CB40AAA124D1128B0082F560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB40AA8324D1128A0082F560 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_XiaChuFang {
+  umbrella header "Pods-XiaChuFang-umbrella.h"
+
+  export *
+  module * { export * }
+}
