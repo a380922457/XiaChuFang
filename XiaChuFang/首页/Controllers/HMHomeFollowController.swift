@@ -17,7 +17,9 @@ class HMHomeFollowController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib.init(nibName: "HMHomeFollowCell", bundle: Bundle.main), forCellReuseIdentifier: cellID)
-        tableView.rowHeight = 500
+        tableView.separatorStyle = .none
+        
+        // 发送网络请求获取数据
         HMHomeProvider.request(.followList) {result in
             if case let .success(response) = result {
                 let data = try? response.mapJSON()
@@ -26,6 +28,17 @@ class HMHomeFollowController: UITableViewController {
                 self.tableView.reloadData()
                 
             }
+        }
+        
+        // 监听图片的点击
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "clickPhoto"), object: nil, queue: OperationQueue.main){
+            (notification) in
+            let dict = notification.userInfo
+            let indexPath: IndexPath = dict!["indexPath"] as! IndexPath
+            let dish: HMDishModel = dict!["model"] as! HMDishModel
+            let photoVc = HMPhotoController(indexPath: indexPath, model: dish)
+            self.tabBarController?.tabBar.isHidden = true
+            self.navigationController?.pushViewController(photoVc, animated: true)
         }
     }
 }
@@ -36,14 +49,17 @@ extension HMHomeFollowController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! HMHomeFollowCell
         cell.model = models[indexPath.row]
-        
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID) as! HMHomeFollowCell
+        cell.model = models[indexPath.row]
+        cell.layoutIfNeeded()
+        return cell.timeLabel.frame.maxY + 35
+    }
     
 }
-
-
 
 // MARK: - tableview数据源方法
 extension HMHomeFollowController{

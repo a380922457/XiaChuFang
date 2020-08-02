@@ -23,8 +23,9 @@ struct HMDishModel: HandyJSON {
     var friendly_create_time: String?
     var create_time: String?
     
-    /// 第一张图片的url
-    var photo: String?
+    /// 作者信息
+    var author: HMAuthor?
+    
     /// 这个菜谱的url
     var url: String?
     
@@ -38,11 +39,31 @@ struct HMDishModel: HandyJSON {
     var n_collects: Int? // 收藏数量
     var ndiggs: Int? // 点赞数量
     
+    /// 第一张图片的信息
+    var image: HMPhoto?
+    
     /// 额外图片
-    var extra_pics: [HMImage]?
-    var author: HMAuthor?
+    var extra_images: [HMPhoto]?
     
+    /// 计算属性，包含所有图片的url
+    var imageUrls: [String?]{
+        var imageUrls = [String?]()
+        imageUrls.append("http://i2.chuimg.com/" + (image?.ident)!)
+        for image: HMPhoto in extra_images!{
+            imageUrls.append("http://i2.chuimg.com/" + image.ident!)
+        }
+        return imageUrls
+    }
     
+    /// 计算属性，包含所有图片的高宽比例
+    var imageRatios: [CGFloat?]{
+        var imageRatios = [CGFloat?]()
+        imageRatios.append(image?.ratio)
+        for image: HMPhoto in extra_images!{
+            imageRatios.append(image.ratio)
+        }
+        return imageRatios
+    }
 }
 
 struct HMAuthor: HandyJSON{
@@ -50,6 +71,13 @@ struct HMAuthor: HandyJSON{
     var photo: String?
 }
 
-struct HMImage: HandyJSON {
-    var url: String?
+
+struct HMPhoto: HandyJSON {
+    var ident: String?
+    var original_width: CGFloat?
+    var original_height: CGFloat?
+    var ratio: CGFloat{
+        return original_height! / original_width!
+    }
 }
+

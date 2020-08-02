@@ -8,7 +8,8 @@ use_frameworks!
     pod 'SwiftyJSON'
     pod 'MJRefresh'
     pod 'KingfisherWebP'
-
+    pod 'Kingfisher'
+    pod 'IBAnimatable'
 end
 
 

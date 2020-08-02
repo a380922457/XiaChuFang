@@ -14,6 +14,8 @@
 		CB196E1924D151AA00A643E1 /* HMHomeVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1824D151AA00A643E1 /* HMHomeVideoController.swift */; };
 		CB196E1B24D15FCA00A643E1 /* HMHomeFollowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1A24D15FCA00A643E1 /* HMHomeFollowModel.swift */; };
 		CB196E1D24D15FDB00A643E1 /* HMHomeFollowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1C24D15FDB00A643E1 /* HMHomeFollowViewModel.swift */; };
+		CB196E1F24D3C04D00A643E1 /* HMCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1E24D3C04D00A643E1 /* HMCollectionViewFlowLayout.swift */; };
+		CB196E2124D3C3DC00A643E1 /* HMHomeFollowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E2024D3C3DC00A643E1 /* HMHomeFollowCollectionViewCell.swift */; };
 		CB40AA8F24D1128A0082F560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AA8E24D1128A0082F560 /* AppDelegate.swift */; };
 		CB40AA9124D1128A0082F560 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AA9024D1128A0082F560 /* SceneDelegate.swift */; };
 		CB40AA9824D1128B0082F560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB40AA9724D1128B0082F560 /* Assets.xcassets */; };
@@ -38,6 +40,10 @@
 		CB40AAEC24D113740082F560 /* HMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AACF24D113730082F560 /* HMNavigationController.swift */; };
 		CB40AAED24D113740082F560 /* HMTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAD024D113730082F560 /* HMTabbarController.swift */; };
 		CB40AAEE24D113740082F560 /* SubjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AAD524D113730082F560 /* SubjectsController.swift */; };
+		CB9A61F524D511F90088DDCA /* HMPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9A61F324D511F90088DDCA /* HMPhotoController.swift */; };
+		CB9A61F624D511F90088DDCA /* HMPhotoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9A61F424D511F90088DDCA /* HMPhotoController.xib */; };
+		CB9A61F824D66EE30088DDCA /* HMPhotoCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9A61F724D66EE30088DDCA /* HMPhotoCollectionViewLayout.swift */; };
+		CB9A61FA24D6AFB10088DDCA /* HMHomeFollowCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9A61F924D6AFB10088DDCA /* HMHomeFollowCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +56,8 @@
 		CB196E1824D151AA00A643E1 /* HMHomeVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeVideoController.swift; sourceTree = "<group>"; };
 		CB196E1A24D15FCA00A643E1 /* HMHomeFollowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowModel.swift; sourceTree = "<group>"; };
 		CB196E1C24D15FDB00A643E1 /* HMHomeFollowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowViewModel.swift; sourceTree = "<group>"; };
+		CB196E1E24D3C04D00A643E1 /* HMCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		CB196E2024D3C3DC00A643E1 /* HMHomeFollowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowCollectionViewCell.swift; sourceTree = "<group>"; };
 		CB40AA8B24D1128A0082F560 /* 下厨房.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "下厨房.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB40AA8E24D1128A0082F560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB40AA9024D1128A0082F560 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,10 @@
 		CB40AACF24D113730082F560 /* HMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMNavigationController.swift; sourceTree = "<group>"; };
 		CB40AAD024D113730082F560 /* HMTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMTabbarController.swift; sourceTree = "<group>"; };
 		CB40AAD524D113730082F560 /* SubjectsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsController.swift; sourceTree = "<group>"; };
+		CB9A61F324D511F90088DDCA /* HMPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMPhotoController.swift; sourceTree = "<group>"; };
+		CB9A61F424D511F90088DDCA /* HMPhotoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMPhotoController.xib; sourceTree = "<group>"; };
+		CB9A61F724D66EE30088DDCA /* HMPhotoCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMPhotoCollectionViewLayout.swift; sourceTree = "<group>"; };
+		CB9A61F924D6AFB10088DDCA /* HMHomeFollowCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +290,7 @@
 		CB40AABA24D113730082F560 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				CB9A61F224D511CA0088DDCA /* 图片浏览器 */,
 				CB40AABB24D113730082F560 /* ViewModels */,
 				CB40AABC24D113730082F560 /* Classes */,
 				CB40AABD24D113730082F560 /* API */,
@@ -327,8 +340,8 @@
 			children = (
 				CB40AAC524D113730082F560 /* HMNavSearchView.swift */,
 				CB40AAC624D113730082F560 /* HMNavSearchView.xib */,
-				CB196E1424D1244200A643E1 /* HMHomeFollowCell.swift */,
-				CB196E1524D1244200A643E1 /* HMHomeFollowCell.xib */,
+				CB6AF74224D6B7E9001C5115 /* 首页关注tableviewcell */,
+				CB9A61FB24D6AFB80088DDCA /* 九宫格collectionview */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -395,6 +408,35 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CB6AF74224D6B7E9001C5115 /* 首页关注tableviewcell */ = {
+			isa = PBXGroup;
+			children = (
+				CB196E1524D1244200A643E1 /* HMHomeFollowCell.xib */,
+				CB196E1424D1244200A643E1 /* HMHomeFollowCell.swift */,
+			);
+			path = "首页关注tableviewcell";
+			sourceTree = "<group>";
+		};
+		CB9A61F224D511CA0088DDCA /* 图片浏览器 */ = {
+			isa = PBXGroup;
+			children = (
+				CB9A61F324D511F90088DDCA /* HMPhotoController.swift */,
+				CB9A61F724D66EE30088DDCA /* HMPhotoCollectionViewLayout.swift */,
+				CB9A61F424D511F90088DDCA /* HMPhotoController.xib */,
+			);
+			path = "图片浏览器";
+			sourceTree = "<group>";
+		};
+		CB9A61FB24D6AFB80088DDCA /* 九宫格collectionview */ = {
+			isa = PBXGroup;
+			children = (
+				CB196E2024D3C3DC00A643E1 /* HMHomeFollowCollectionViewCell.swift */,
+				CB196E1E24D3C04D00A643E1 /* HMCollectionViewFlowLayout.swift */,
+				CB9A61F924D6AFB10088DDCA /* HMHomeFollowCollectionView.swift */,
+			);
+			path = "九宫格collectionview";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -457,6 +499,7 @@
 			files = (
 				CB40AA9B24D1128B0082F560 /* LaunchScreen.storyboard in Resources */,
 				CB40AA9824D1128B0082F560 /* Assets.xcassets in Resources */,
+				CB9A61F624D511F90088DDCA /* HMPhotoController.xib in Resources */,
 				CB196E1724D1244200A643E1 /* HMHomeFollowCell.xib in Resources */,
 				CB40AAE524D113740082F560 /* HMNavSearchView.xib in Resources */,
 			);
@@ -511,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB196E1F24D3C04D00A643E1 /* HMCollectionViewFlowLayout.swift in Sources */,
 				CB40AADE24D113740082F560 /* HMPageCollectionViewFlowLayout.swift in Sources */,
 				CB196E1D24D15FDB00A643E1 /* HMHomeFollowViewModel.swift in Sources */,
 				CB40AAD824D113740082F560 /* MineController.swift in Sources */,
@@ -529,6 +573,10 @@
 				CB40AAE224D113740082F560 /* HMHomeRecController.swift in Sources */,
 				CB40AAE024D113740082F560 /* HomeController.swift in Sources */,
 				CB40AAE724D113740082F560 /* const.swift in Sources */,
+				CB9A61F524D511F90088DDCA /* HMPhotoController.swift in Sources */,
+				CB9A61F824D66EE30088DDCA /* HMPhotoCollectionViewLayout.swift in Sources */,
+				CB196E2124D3C3DC00A643E1 /* HMHomeFollowCollectionViewCell.swift in Sources */,
+				CB9A61FA24D6AFB10088DDCA /* HMHomeFollowCollectionView.swift in Sources */,
 				CB40AAEC24D113740082F560 /* HMNavigationController.swift in Sources */,
 				CB40AADB24D113740082F560 /* HMPageTitleView.swift in Sources */,
 				CB40AAED24D113740082F560 /* HMTabbarController.swift in Sources */,

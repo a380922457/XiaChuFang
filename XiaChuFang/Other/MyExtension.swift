@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-let globalColor = UIColor.init(r: 103, g: 185, b: 98)
 
 extension UIColor{
     convenience init(r: CGFloat, g: CGFloat, b: CGFloat, alpha: CGFloat = 1) {
