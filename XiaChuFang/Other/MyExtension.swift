@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 
-extension UIColor{
-    convenience init(r: CGFloat, g: CGFloat, b: CGFloat, alpha: CGFloat = 1) {
-        self.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: alpha)
-    }
-}
+//extension UIColor{
+//    convenience init(r: CGFloat, g: CGFloat, b: CGFloat, alpha: CGFloat = 1) {
+//        self.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: alpha)
+//    }
+//}
 
 protocol NibLoadable{
     
@@ -28,7 +28,6 @@ extension NibLoadable where Self : UIView {
 
 
 extension String{
-
     func sizeWithText(font: UIFont?, size: CGSize = CGSize.init(width: YYScreenWidth, height: 0)) -> CGSize {
     let attributes = [NSAttributedString.Key.font: font]
     let option = NSStringDrawingOptions.usesLineFragmentOrigin

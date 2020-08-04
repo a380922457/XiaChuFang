@@ -74,7 +74,6 @@ open class HMPageTitleView: UIView {
         return separationLine
     }()
     
-    
     public lazy var coverView: UIView = {
         let coverView = UIView()
         coverView.backgroundColor = self.style.coverViewBackgroundColor
@@ -253,6 +252,7 @@ extension HMPageTitleView {
     }
 }
 
+
 // MARK:- 监听label的点击
 extension HMPageTitleView {
     @objc func titleLabelClick(_ tapGes : UITapGestureRecognizer) {
@@ -365,6 +365,7 @@ extension HMPageTitleView : HMPageContentViewDelegate {
             let deltaW = targetLabel.frame.width - sourceLabel.frame.width
             bottomLine.frame.origin.x = sourceLabel.frame.origin.x + progress * deltaX
             bottomLine.frame.size.width = sourceLabel.frame.width + progress * deltaW
+    
         }
         
         if style.isShowCoverView {
@@ -385,8 +386,15 @@ extension HMPageTitleView : HMPageContentViewDelegate {
             }
             
             if self.style.isShowBottomLine {
-                self.bottomLine.frame.origin.x = targetLabel.frame.origin.x
-                self.bottomLine.frame.size.width = targetLabel.frame.width
+                if let _ = self.style.titleWidth{
+                    let textWidth = targetLabel.textRect(forBounds: targetLabel.bounds, limitedToNumberOfLines: 1).width
+                    self.bottomLine.frame.size.width = textWidth
+                    self.bottomLine.frame.origin.x = targetLabel.frame.origin.x + (targetLabel.frame.size.width - textWidth) / 2
+                }else{
+                    self.bottomLine.frame.origin.x = targetLabel.frame.origin.x
+                    self.bottomLine.frame.size.width = targetLabel.frame.width
+                }
+                
             }
             
             if self.style.isShowCoverView {

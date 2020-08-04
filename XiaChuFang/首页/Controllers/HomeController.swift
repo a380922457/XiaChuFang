@@ -42,8 +42,8 @@ class HomeController: UIViewController {
         for vc in viewControllers{
             addChild(vc)
         }
-        let pageView = HMPageView(frame: CGRect(x: 0, y: 100, width: YYScreenWidth, height: YYScreenHeigth-100), style: style, titles: titles, childViewControllers: viewControllers)
+        let pageView = HMPageView(frame: CGRect(x: 0, y: 100, width: YYScreenWidth, height: YYScreenHeigth-100), style: style, titles: titles, childViewControllers: viewControllers, startIndex: 1)
         view.addSubview(pageView)
-    
+        
     }
 }

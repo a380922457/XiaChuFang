@@ -76,7 +76,7 @@
                         </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1天前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S01-38-37Z">
-                        <rect key="frame" x="10" y="528" width="75" height="21"/>
+                        <rect key="frame" x="10" y="628" width="75" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="75" id="5FB-qv-dzc"/>
                             <constraint firstAttribute="height" constant="21" id="ea7-Q9-R0a"/>
@@ -99,7 +99,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1p-Yq-T30" userLabel="互动条">
                         <rect key="frame" x="10" y="442" width="354" height="28"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Db-ka-Qd9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点赞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Db-ka-Qd9">
                                 <rect key="frame" x="45" y="6" width="40" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -120,7 +120,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="common_comment"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHs-nn-diy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHs-nn-diy">
                                 <rect key="frame" x="134" y="5" width="35" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -128,7 +128,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFE-cA-JbW">
-                                <rect key="frame" x="264" y="3" width="24" height="24"/>
+                                <rect key="frame" x="254" y="3" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="OIF-b6-BZn"/>
                                     <constraint firstAttribute="height" constant="24" id="hIx-Mv-o79"/>
@@ -136,11 +136,11 @@
                                 <state key="normal" image="dish_collect"/>
                                 <state key="selected" image="homepageRecipeCollected"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2z1-LC-pPL">
-                                <rect key="frame" x="298" y="5" width="30" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收藏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2z1-LC-pPL">
+                                <rect key="frame" x="288" y="5" width="40" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="HnO-68-kse"/>
-                                    <constraint firstAttribute="width" constant="30" id="clP-DT-0BY"/>
+                                    <constraint firstAttribute="width" constant="40" id="clP-DT-0BY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -168,22 +168,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u9E-AT-Ali">
-                        <rect key="frame" x="10" y="480" width="354" height="0.0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="20" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u9E-AT-Ali" customClass="HMCommentTableView" customModule="下厨房" customModuleProvider="target">
+                        <rect key="frame" x="10" y="480" width="354" height="100"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" id="IGE-FZ-haw"/>
+                            <constraint firstAttribute="height" constant="100" id="IGE-FZ-haw"/>
                         </constraints>
+                        <connections>
+                            <outlet property="commentTableViewHeightLayout" destination="IGE-FZ-haw" id="ctA-6f-eHm"/>
+                        </connections>
                     </tableView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imessage-2" translatesAutoresizingMaskIntoConstraints="NO" id="Li4-HF-q8M">
-                        <rect key="frame" x="10" y="487" width="31" height="30"/>
+                        <rect key="frame" x="10" y="587" width="31" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="Ncw-qA-rD7"/>
                             <constraint firstAttribute="width" constant="31" id="nyo-Id-zD1"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWL-Iw-J7N" userLabel="评论contentView" customClass="AnimatableView" customModule="IBAnimatable">
-                        <rect key="frame" x="51" y="483" width="313" height="40"/>
+                        <rect key="frame" x="51" y="583" width="313" height="40"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs0-Zb-1V4">
                                 <rect key="frame" x="0.0" y="0.0" width="226" height="39"/>
@@ -197,14 +201,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="31" id="PwB-oS-F6K"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoe-AT-tTZ">
                                 <rect key="frame" x="282" y="0.0" width="31" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="31" id="Ovx-bK-lqg"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93598202720207258" green="0.93598202720207258" blue="0.93598202720207258" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -13,6 +13,7 @@ open class HMHomeFollowCollectionView: UICollectionView {
     var model: HMDishModel?{
         didSet{
             (collectionViewLayout as! HMCollectionViewFlowLayout).model = model
+            self.reloadData()
         }
     }
     override open func awakeFromNib(){
@@ -20,7 +21,6 @@ open class HMHomeFollowCollectionView: UICollectionView {
         delegate = self
         dataSource = self
         register(HMHomeFollowCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        
     }
     
     override open func layoutSubviews() {

@@ -64,6 +64,16 @@ struct HMDishModel: HandyJSON {
         }
         return imageRatios
     }
+    
+    /// 最近评论
+    var latest_comments:[HMComment]?
+    
+    
+}
+
+struct HMComment: HandyJSON{
+    var txt: String?
+    var author: HMAuthor?
 }
 
 struct HMAuthor: HandyJSON{

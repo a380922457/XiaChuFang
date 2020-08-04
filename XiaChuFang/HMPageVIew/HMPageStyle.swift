@@ -5,7 +5,6 @@ public class HMPageStyle {
     /// 标题是否可以滚动
     public var isTitleScrollEnable: Bool = false
     
-    
     /// titleView的一些属性
     public var titleViewHeight: CGFloat = 44
     public var titleColor: UIColor = UIColor.black
