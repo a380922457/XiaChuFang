@@ -17,16 +17,13 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        // 隐藏导航条
-        navigationController?.navigationBar.isHidden = true
-        
-        // 自定义导航条
-        let titleView = HMNavSearchView.loadFromNib()
-        titleView.frame = CGRect(x: 0, y: 44, width: YYScreenWidth, height: 40)
-        view.addSubview(titleView)
-        
        
-        // 加载下方pageview
+        setupNav()
+        setupPagerView()
+        
+    }
+    
+    func setupPagerView(){
         let style = HMPageStyle()
         style.isTitleScrollEnable = false
         style.isShowBottomLine = true
@@ -36,7 +33,7 @@ class HomeController: UIViewController {
         style.bottomLineHeight = 3
         style.titleWidth = 80
         style.titleFontSize = 18
-            
+
         let titles = ["关注", "推荐", "视频"]
         let viewControllers:[UIViewController] = [HMHomeFollowController(), HMHomeRecController(), HMHomeVideoController()]
         for vc in viewControllers{
@@ -44,6 +41,30 @@ class HomeController: UIViewController {
         }
         let pageView = HMPageView(frame: CGRect(x: 0, y: 100, width: YYScreenWidth, height: YYScreenHeigth-100), style: style, titles: titles, childViewControllers: viewControllers, startIndex: 1)
         view.addSubview(pageView)
+    }
+    
+    func setupNav(){
+        // 设置导航条内容
+        let titleView = HMNavSearchView.loadFromNib()
+        titleView.frame = CGRect(x: 0, y: 0, width: (YYScreenWidth) - 140, height: 40)
+        titleView.delegate = self
+        navigationItem.titleView = titleView
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "homepageCreateRecipeButton"), style: .plain, target: self, action: nil)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "notification"), style: .plain, target: self, action: nil)
+        navigationController?.navigationBar.barTintColor = .white
+
+    }
+}
+
+extension HomeController: HMNavSearchViewDelegate{
+    func clickSearchButton() {jump()}
+    
+    func clickSearchLabel() {jump()}
+        
+    func jump(){
+        let vc = HMSearchFirstController.init(collectionViewLayout: HMSearchFirstLayout())
+        navigationController?.pushViewController(vc, animated: false)
     }
 }

@@ -26,7 +26,6 @@ class HMHomeFollowController: UITableViewController {
                 let json = JSON(data!)
                 self.models = JSONDeserializer<HMHomeFollowModel>.deserializeModelArrayFrom(json: json["content"]["feeds"].description)! as! [HMHomeFollowModel]
                 self.tableView.reloadData()
-                
             }
         }
         
@@ -37,7 +36,6 @@ class HMHomeFollowController: UITableViewController {
             let indexPath: IndexPath = dict!["indexPath"] as! IndexPath
             let dish: HMDishModel = dict!["model"] as! HMDishModel
             let photoVc = HMPhotoController(indexPath: indexPath, model: dish)
-            self.tabBarController?.tabBar.isHidden = true
             self.navigationController?.pushViewController(photoVc, animated: true)
         }
     }

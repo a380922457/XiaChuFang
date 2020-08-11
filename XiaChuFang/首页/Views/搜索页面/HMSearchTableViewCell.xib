@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="166" id="KGk-i7-Jjw" customClass="HMSearchTableViewCell" customModule="下厨房" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="166"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="407" height="166"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PPi-UH-OJS" customClass="AnimatableImageView" customModule="IBAnimatable">
+                        <rect key="frame" x="20" y="10" width="150" height="146"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="2mO-dJ-d7q"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不焯水不放油的家常红烧肉" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfs-gE-iYI">
+                        <rect key="frame" x="185" y="17" width="192" height="45.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.7分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cI-Wh-vwp">
+                        <rect key="frame" x="185" y="72.5" width="54" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="54" id="hWH-3Q-D1k"/>
+                            <constraint firstAttribute="height" constant="21" id="wr7-MB-ZoW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000人做过" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wl5-M8-vqr">
+                        <rect key="frame" x="239" y="72.5" width="106" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="978-cQ-EcM"/>
+                            <constraint firstAttribute="width" constant="106" id="goy-t4-liJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="爱做饭的小青蛙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB8-NR-Snc">
+                        <rect key="frame" x="185" y="135" width="160" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="liW-he-FNq"/>
+                            <constraint firstAttribute="height" constant="18" id="w7E-Ll-nKd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="gB8-NR-Snc" secondAttribute="bottom" constant="2" id="8E3-Jq-YNg"/>
+                    <constraint firstItem="PPi-UH-OJS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9z4-6B-82T"/>
+                    <constraint firstAttribute="bottom" secondItem="PPi-UH-OJS" secondAttribute="bottom" constant="10" id="A2W-zf-20r"/>
+                    <constraint firstItem="7cI-Wh-vwp" firstAttribute="centerY" secondItem="PPi-UH-OJS" secondAttribute="centerY" id="KO3-hc-LWr"/>
+                    <constraint firstItem="7cI-Wh-vwp" firstAttribute="top" secondItem="sfs-gE-iYI" secondAttribute="bottom" constant="10" id="SR9-xs-pB8"/>
+                    <constraint firstAttribute="trailing" secondItem="sfs-gE-iYI" secondAttribute="trailing" constant="30" id="Sjo-qx-p9B"/>
+                    <constraint firstItem="gB8-NR-Snc" firstAttribute="leading" secondItem="PPi-UH-OJS" secondAttribute="trailing" constant="15" id="WKP-lJ-dcK"/>
+                    <constraint firstItem="sfs-gE-iYI" firstAttribute="leading" secondItem="PPi-UH-OJS" secondAttribute="trailing" constant="15" id="Wll-6f-z4C"/>
+                    <constraint firstItem="7cI-Wh-vwp" firstAttribute="leading" secondItem="PPi-UH-OJS" secondAttribute="trailing" constant="15" id="c98-Ar-8jK"/>
+                    <constraint firstItem="wl5-M8-vqr" firstAttribute="leading" secondItem="7cI-Wh-vwp" secondAttribute="trailing" id="drw-vC-Ags"/>
+                    <constraint firstItem="wl5-M8-vqr" firstAttribute="top" secondItem="sfs-gE-iYI" secondAttribute="bottom" constant="10" id="p6O-sp-Ch7"/>
+                    <constraint firstItem="PPi-UH-OJS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="yGB-Ij-SBb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="my_author_name" destination="gB8-NR-Snc" id="DLf-rv-PtV"/>
+                <outlet property="my_imageView" destination="PPi-UH-OJS" id="s8I-r3-THY"/>
+                <outlet property="my_number" destination="wl5-M8-vqr" id="q8j-ZV-48o"/>
+                <outlet property="my_rate" destination="7cI-Wh-vwp" id="YLL-Bb-S9A"/>
+                <outlet property="my_title" destination="sfs-gE-iYI" id="5TX-IP-cdT"/>
+                <outlet property="numberHeight" destination="978-cQ-EcM" id="q4M-Je-3KX"/>
+                <outlet property="rateHeight" destination="wr7-MB-ZoW" id="yoV-LX-hZW"/>
+                <outlet property="rateWidth" destination="hWH-3Q-D1k" id="GQV-ad-v3o"/>
+            </connections>
+            <point key="canvasLocation" x="13.768115942028986" y="91.741071428571431"/>
+        </tableViewCell>
+    </objects>
+</document>

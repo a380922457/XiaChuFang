@@ -12,7 +12,7 @@ public class HMPageStyle {
     public var titleFontSize: CGFloat = 15
     public var titleViewBackgroundColor: UIColor = UIColor.white
     public var titleMargin: CGFloat = 30
-    public var titleWidth: CGFloat?
+    public var titleWidth: CGFloat = 80
     
     /// 是否显示滚动条
     public var isShowBottomLine: Bool = false

@@ -36,3 +36,28 @@ extension String{
     }
 
 }
+
+
+extension UIView{
+    //MARK:- 绘制虚线
+    func drawDashLine(_ lineView: UIView, lineColor: UIColor, lineWidth: CGFloat = 1, lineLength: Int = 2, lineSpacing: Int = 3) {
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.bounds = lineView.bounds
+        shapeLayer.anchorPoint = CGPoint(x: 0, y: 0)
+        shapeLayer.strokeColor = lineColor.cgColor
+
+        shapeLayer.lineWidth = lineWidth
+        shapeLayer.lineJoin = CAShapeLayerLineJoin.round
+
+        shapeLayer.lineDashPattern = [NSNumber(value: lineLength),NSNumber(value: lineSpacing)]
+
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 0, y: 0))
+        path.addLine(to: CGPoint(x: lineView.frame.size.width, y: 0))
+
+        shapeLayer.path = path
+        lineView.layer.addSublayer(shapeLayer)
+         
+    }
+}
+

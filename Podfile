@@ -10,6 +10,7 @@ use_frameworks!
     pod 'KingfisherWebP'
     pod 'Kingfisher'
     pod 'IBAnimatable'
+    pod 'Ji', '~> 5.0.0'
 end
 
 

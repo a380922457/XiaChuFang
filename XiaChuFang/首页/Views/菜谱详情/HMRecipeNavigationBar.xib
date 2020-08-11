@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HMRecipeNavigationBar" customModule="下厨房" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIB-St-1lt" userLabel="wx">
+                    <rect key="frame" x="86" y="13" width="24" height="24"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="convenient_share_wx"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aA-JR-kv1" userLabel="pyq">
+                    <rect key="frame" x="135" y="13" width="24" height="24"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="convenient_share_pyq"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whN-Ds-eVs" userLabel="more">
+                    <rect key="frame" x="184" y="13" width="24" height="24"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="convenient_share_other"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6n6-Ra-j3z" userLabel="back">
+                    <rect key="frame" x="22" y="13" width="24" height="24"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="backStretchBackgroundNormal-1"/>
+                    <connections>
+                        <action selector="clickBack:" destination="iN0-l3-epB" eventType="touchUpInside" id="mSY-4A-aIa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="9aA-JR-kv1" firstAttribute="width" secondItem="6n6-Ra-j3z" secondAttribute="width" id="0sH-IZ-4Vo"/>
+                <constraint firstItem="6n6-Ra-j3z" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1sk-aq-JKr"/>
+                <constraint firstItem="JIB-St-1lt" firstAttribute="centerY" secondItem="6n6-Ra-j3z" secondAttribute="centerY" id="6ww-Fb-gxA"/>
+                <constraint firstItem="9aA-JR-kv1" firstAttribute="centerY" secondItem="6n6-Ra-j3z" secondAttribute="centerY" id="Dnw-Rn-8HD"/>
+                <constraint firstItem="9aA-JR-kv1" firstAttribute="leading" secondItem="JIB-St-1lt" secondAttribute="trailing" constant="25" id="LtU-II-W73"/>
+                <constraint firstItem="JIB-St-1lt" firstAttribute="height" secondItem="6n6-Ra-j3z" secondAttribute="height" id="Q7d-xo-Mtv"/>
+                <constraint firstItem="whN-Ds-eVs" firstAttribute="height" secondItem="6n6-Ra-j3z" secondAttribute="height" id="QG8-mQ-Vsb"/>
+                <constraint firstItem="whN-Ds-eVs" firstAttribute="leading" secondItem="9aA-JR-kv1" secondAttribute="trailing" constant="25" id="b5H-qv-6ly"/>
+                <constraint firstItem="whN-Ds-eVs" firstAttribute="width" secondItem="6n6-Ra-j3z" secondAttribute="width" id="iMV-m1-qsn"/>
+                <constraint firstItem="9aA-JR-kv1" firstAttribute="height" secondItem="6n6-Ra-j3z" secondAttribute="height" id="im5-LA-teP"/>
+                <constraint firstItem="JIB-St-1lt" firstAttribute="leading" secondItem="6n6-Ra-j3z" secondAttribute="trailing" constant="40" id="oPS-b4-HZM"/>
+                <constraint firstItem="6n6-Ra-j3z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="22" id="pBx-tl-7ME"/>
+                <constraint firstItem="JIB-St-1lt" firstAttribute="width" secondItem="6n6-Ra-j3z" secondAttribute="width" id="qtq-gc-uBZ"/>
+                <constraint firstItem="whN-Ds-eVs" firstAttribute="centerY" secondItem="6n6-Ra-j3z" secondAttribute="centerY" id="s7P-cy-ZhW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backButton" destination="6n6-Ra-j3z" id="QOU-tm-x1E"/>
+                <outlet property="moreButton" destination="whN-Ds-eVs" id="qcr-wf-8wS"/>
+                <outlet property="pyqButton" destination="9aA-JR-kv1" id="6xS-75-ePF"/>
+                <outlet property="wxButton" destination="JIB-St-1lt" id="Me5-vU-ggD"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backStretchBackgroundNormal-1" width="24" height="24"/>
+        <image name="convenient_share_other" width="24" height="24"/>
+        <image name="convenient_share_pyq" width="24" height="24"/>
+        <image name="convenient_share_wx" width="24" height="24"/>
+    </resources>
+</document>

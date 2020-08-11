@@ -16,8 +16,9 @@ class HMPhotoController: UIViewController {
     @IBOutlet weak var pageLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBAction func clickCancleButton() {
-        self.navigationController?.popViewController(animated: true)
-        self.tabBarController?.tabBar.isHidden = false
+        navigationController?.popViewController(animated: true)
+        tabBarController?.tabBar.isHidden = false
+        navigationController?.navigationBar.isHidden = false
     }
     
     convenience init(indexPath: IndexPath, model: HMDishModel){
@@ -31,9 +32,14 @@ class HMPhotoController: UIViewController {
         super.viewDidLoad()
         collectionView.register(HMPhotoCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         (collectionView.collectionViewLayout as! HMPhotoCollectionViewLayout).model = model
+        // 刷新标签
         collectionView.contentOffset = CGPoint(x: CGFloat(indexPath!.row) * YYScreenWidth, y: 0)
         scrollViewDidEndDecelerating(collectionView)
+        navigationController?.navigationBar.isHidden = true
+        tabBarController?.tabBar.isHidden = true
+
     }
+    
 }
 
 extension HMPhotoController: UICollectionViewDataSource{

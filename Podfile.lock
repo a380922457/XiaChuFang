@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.2.2)
   - HandyJSON (5.0.2)
   - IBAnimatable (6.1.0)
+  - Ji (5.0.0)
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
@@ -28,6 +29,7 @@ PODS:
 DEPENDENCIES:
   - HandyJSON
   - IBAnimatable
+  - Ji (~> 5.0.0)
   - Kingfisher
   - KingfisherWebP
   - MJRefresh
@@ -40,6 +42,7 @@ SPEC REPOS:
     - Alamofire
     - HandyJSON
     - IBAnimatable
+    - Ji
     - Kingfisher
     - KingfisherWebP
     - libwebp
@@ -52,6 +55,7 @@ SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
+  Ji: d795fed288fe78658b404c88946d753b17d8d7f4
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   KingfisherWebP: 50d8389a48a9004c36e655470ccbff96de1ced9c
   libwebp: 04242ef451672185c1fe41b285a034d2fbda483c
@@ -60,6 +64,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 4b3e1065f80cf1a5daa1bac25f9e3d5482d4b7bd
+PODFILE CHECKSUM: 969880da7b666a6f8980c35a4fe2481c4eb06ca2
 
 COCOAPODS: 1.8.4

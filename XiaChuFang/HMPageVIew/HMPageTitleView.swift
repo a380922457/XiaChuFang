@@ -184,20 +184,13 @@ extension HMPageTitleView {
         
         let count = titleLabels.count
         for (i, titleLabel) in titleLabels.enumerated() {
-            
-            // 如果手动指定了按钮宽度
-            if let titleWidth = style.titleWidth{
-                labelW = titleWidth
-                let start: CGFloat = (bounds.width - (labelW * CGFloat(count))) / 2
-                labelX = start + labelW * CGFloat(i)
-            }
-            
-            else if style.isTitleScrollEnable {
+            if style.isTitleScrollEnable {
                 labelW = (titles[i] as NSString).boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: 0), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : titleLabel.font!], context: nil).width
                 labelX = i == 0 ? style.titleMargin * 0.5 : (titleLabels[i-1].frame.maxX + style.titleMargin)
             } else {
-                labelW = bounds.width / CGFloat(count)
-                labelX = labelW * CGFloat(i)
+                labelW = style.titleWidth
+                let start: CGFloat = (bounds.width - (labelW * CGFloat(count))) / 2
+                labelX = start + labelW * CGFloat(i)
             }
             
             titleLabel.frame = CGRect(x: labelX, y: labelY, width: labelW, height: labelH)
@@ -233,15 +226,9 @@ extension HMPageTitleView {
         guard titleLabels.count - 1 >= currentIndex  else { return }
         let label = titleLabels[currentIndex]
         
-        if let _ = style.titleWidth{
-            // 如果手动指定了titleLabel的宽度，那么下划线的宽度等于文字的宽度
-            let textWidth = label.textRect(forBounds: label.bounds, limitedToNumberOfLines: 1).width
-            bottomLine.frame.size.width = textWidth
-            bottomLine.frame.origin.x = label.frame.origin.x + (label.frame.size.width - textWidth) / 2
-        }else{
-            bottomLine.frame.origin.x = label.frame.origin.x
-            bottomLine.frame.size.width = label.frame.width
-        }
+        let textWidth = label.textRect(forBounds: label.bounds, limitedToNumberOfLines: 1).width
+        bottomLine.frame.size.width = textWidth
+        bottomLine.frame.origin.x = label.frame.origin.x + (label.frame.size.width - textWidth) / 2
         
         bottomLine.frame.size.height = self.style.bottomLineHeight
         bottomLine.frame.origin.y = self.bounds.height - self.style.bottomLineHeight
@@ -286,15 +273,10 @@ extension HMPageTitleView {
         
         if style.isShowBottomLine {
             UIView.animate(withDuration: 0.25, animations: {
-                if let _ = self.style.titleWidth{
-                    // 如果手动指定了titleLabel的宽度，那么下划线的宽度等于文字的宽度
-                    let textWidth = targetLabel.textRect(forBounds: targetLabel.bounds, limitedToNumberOfLines: 1).width
-                    self.bottomLine.frame.size.width = textWidth
-                    self.bottomLine.frame.origin.x = targetLabel.frame.origin.x + (targetLabel.frame.size.width - textWidth) / 2
-                }else{
-                    self.bottomLine.frame.origin.x = targetLabel.frame.origin.x
-                    self.bottomLine.frame.size.width = targetLabel.frame.width
-                }
+                // 如果手动指定了titleLabel的宽度，那么下划线的宽度等于文字的宽度
+                let textWidth = targetLabel.textRect(forBounds: targetLabel.bounds, limitedToNumberOfLines: 1).width
+                self.bottomLine.frame.size.width = textWidth
+                self.bottomLine.frame.origin.x = targetLabel.frame.origin.x + (targetLabel.frame.size.width - textWidth) / 2
             })
         }
         
@@ -361,11 +343,15 @@ extension HMPageTitleView : HMPageContentViewDelegate {
         }
         
         if style.isShowBottomLine {
-            let deltaX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
-            let deltaW = targetLabel.frame.width - sourceLabel.frame.width
-            bottomLine.frame.origin.x = sourceLabel.frame.origin.x + progress * deltaX
-            bottomLine.frame.size.width = sourceLabel.frame.width + progress * deltaW
-    
+            let sourceWidth = targetLabel.textRect(forBounds: sourceLabel.bounds, limitedToNumberOfLines: 1).width
+            let targetWidth = targetLabel.textRect(forBounds: targetLabel.bounds, limitedToNumberOfLines: 1).width
+            
+            let deltaX = (targetLabel.frame.origin.x - targetWidth) - (sourceLabel.frame.origin.x - sourceWidth)
+            let sourceOriginX = sourceLabel.frame.origin.x + (sourceLabel.frame.width - sourceWidth) / 2
+            bottomLine.frame.origin.x = sourceOriginX + progress * deltaX
+            
+//            let deltaW = targetLabel.frame.width - sourceLabel.frame.width
+//            bottomLine.frame.size.width = sourceLabel.frame.width + progress * deltaW
         }
         
         if style.isShowCoverView {
@@ -386,19 +372,12 @@ extension HMPageTitleView : HMPageContentViewDelegate {
             }
             
             if self.style.isShowBottomLine {
-                if let _ = self.style.titleWidth{
-                    let textWidth = targetLabel.textRect(forBounds: targetLabel.bounds, limitedToNumberOfLines: 1).width
-                    self.bottomLine.frame.size.width = textWidth
-                    self.bottomLine.frame.origin.x = targetLabel.frame.origin.x + (targetLabel.frame.size.width - textWidth) / 2
-                }else{
-                    self.bottomLine.frame.origin.x = targetLabel.frame.origin.x
-                    self.bottomLine.frame.size.width = targetLabel.frame.width
-                }
-                
+                let textWidth = targetLabel.textRect(forBounds: targetLabel.bounds, limitedToNumberOfLines: 1).width
+                self.bottomLine.frame.size.width = textWidth
+                self.bottomLine.frame.origin.x = targetLabel.frame.origin.x + (targetLabel.frame.size.width - textWidth) / 2
             }
             
             if self.style.isShowCoverView {
-                
                 self.coverView.frame.size.width = self.style.isTitleScrollEnable ? (targetLabel.frame.width + 2 * self.style.coverMargin) : targetLabel.frame.width
                 self.coverView.frame.origin.x = self.style.isTitleScrollEnable ? (targetLabel.frame.origin.x - self.style.coverMargin) : targetLabel.frame.origin.x
             }
