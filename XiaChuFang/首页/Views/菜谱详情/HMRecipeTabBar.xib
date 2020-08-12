@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HMRecipeTabBar" customModule="下厨房" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNw-fy-yFt" userLabel="分割线">
+                    <rect key="frame" x="10" y="0.0" width="394" height="1"/>
+                    <color key="backgroundColor" white="0.78507598458904104" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="esw-ZE-obv"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-gY-E78">
+                    <rect key="frame" x="25" y="6" width="90" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="R2x-dL-d0J"/>
+                        <constraint firstAttribute="width" constant="90" id="gp6-zx-r6l"/>
+                    </constraints>
+                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="收藏" image="redfav">
+                        <color key="titleColor" red="0.87676449919999999" green="0.28411639779999998" blue="0.23300580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="clickCollect:" destination="iN0-l3-epB" eventType="touchUpInside" id="DfL-cW-IQE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0D-aQ-y8j">
+                    <rect key="frame" x="130" y="6" width="90" height="40"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="传作品" image="creatdish">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="clickUpload:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ejf-Ep-PHK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ5-4B-m0z">
+                    <rect key="frame" x="235" y="6" width="90" height="40"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="评论" image="common_comment">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="clickComment:" destination="iN0-l3-epB" eventType="touchUpInside" id="hyl-YO-MQC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cNw-fy-yFt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="2Fd-3M-Iw6"/>
+                <constraint firstItem="Y0D-aQ-y8j" firstAttribute="leading" secondItem="ttA-gY-E78" secondAttribute="trailing" constant="15" id="3PA-ch-Y5f"/>
+                <constraint firstItem="CQ5-4B-m0z" firstAttribute="height" secondItem="ttA-gY-E78" secondAttribute="height" id="5iH-SM-vpY"/>
+                <constraint firstItem="Y0D-aQ-y8j" firstAttribute="top" secondItem="cNw-fy-yFt" secondAttribute="bottom" constant="5" id="AlE-3i-LVJ"/>
+                <constraint firstItem="ttA-gY-E78" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="AyE-U4-N59"/>
+                <constraint firstItem="Y0D-aQ-y8j" firstAttribute="height" secondItem="ttA-gY-E78" secondAttribute="height" id="FSZ-09-Wci"/>
+                <constraint firstItem="CQ5-4B-m0z" firstAttribute="leading" secondItem="Y0D-aQ-y8j" secondAttribute="trailing" constant="15" id="JHQ-P2-dba"/>
+                <constraint firstItem="Y0D-aQ-y8j" firstAttribute="width" secondItem="ttA-gY-E78" secondAttribute="width" id="Ko1-2J-uG1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cNw-fy-yFt" secondAttribute="trailing" constant="10" id="QfA-w9-Jth"/>
+                <constraint firstItem="CQ5-4B-m0z" firstAttribute="width" secondItem="ttA-gY-E78" secondAttribute="width" id="X4W-hd-XyE"/>
+                <constraint firstItem="cNw-fy-yFt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="0.10000000000000001" id="ZzP-aH-OGa"/>
+                <constraint firstItem="ttA-gY-E78" firstAttribute="top" secondItem="cNw-fy-yFt" secondAttribute="bottom" constant="5" id="gIm-bf-4Lu"/>
+                <constraint firstItem="CQ5-4B-m0z" firstAttribute="top" secondItem="cNw-fy-yFt" secondAttribute="bottom" constant="5" id="pNR-JT-Xnz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectButton" destination="ttA-gY-E78" id="LcJ-AI-6Yj"/>
+                <outlet property="commentButton" destination="CQ5-4B-m0z" id="SUA-qh-RLd"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="101.45089285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common_comment" width="24" height="24"/>
+        <image name="creatdish" width="22" height="22"/>
+        <image name="redfav" width="25" height="25"/>
+    </resources>
+</document>

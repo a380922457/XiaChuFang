@@ -25,7 +25,7 @@ struct HMRecModel: HandyJSON {
     }
     
     var authorImage: String{
-        return "http://i2.chuimg.com/" + author!["image"]!["ident"]!
+        return "http://i2.chuimg.com/" + (author?["image"]?["ident"] ?? "")
     }
 }
 

@@ -44,7 +44,7 @@ struct HMRecipeDetailModel {
     
     var text: String?
     var gradients = [(String, String)]()
-    var steps =  [(String, String)]()
+    var steps =  [(String, String, Float)]()
     var smallTip: String?
     
     var comments = [HMComment]()
@@ -94,8 +94,7 @@ struct HMRecipeDetailModel {
         let text = jiDoc.xPath("//div[@class='desc mt30']")?.first?.content
         model.text = text?.trimmingCharacters(in: ["\n", " "])
         
-        model.smallTip = jiDoc.xPath("//div[@class='tip']")?.first?.content
-
+        model.smallTip = jiDoc.xPath("//div[@class='tip']")?.first?.content?.trimmingCharacters(in: ["\n", " "])
         
         // 原材料
         let gradNames = jiDoc.xPath("//td[@class='name']")
@@ -116,10 +115,18 @@ struct HMRecipeDetailModel {
         for i in 0..<steps.count{
             let text: String = steps[i].xPath("p").first!.content!
             var imageUrl = ""
+            var ratio: Float = 0
             if let tmp = steps[i].xPath("img").first?.attributes["src"]{
                 imageUrl = tmp
+                let items = imageUrl.split(separator: "_")
+                
+                let width = items[1].prefix(while: { (c) -> Bool in return c != "w"})
+                
+                let height = items[2].prefix(while: { (c) -> Bool in return c != "h"})
+                
+                ratio = Float(height)! / Float(width)!
             }
-            model.steps.append((text, imageUrl))
+            model.steps.append((text, imageUrl, ratio))
         }
                 
         // 评论
@@ -131,11 +138,10 @@ struct HMRecipeDetailModel {
         for i in 0..<min((authorTexts ?? []).count, 2){
             let imageUrl = authorImageUrls?[i].xPath("a").first?.xPath("img").first?.attributes["data-src"]
             let name = authorNames?[i].xPath("a").first?.content
-            let text = authorTexts?[i].content
+            let text = authorTexts?[i].content!.trimmingCharacters(in: ["\n", " "])
             let number = likeNumbers?[i].content
             model.comments.append(HMComment(authorImageUrl: imageUrl, authorName: name, authorText: text, likeNumber: number))
         }
-
         
         return model
     }

@@ -52,6 +52,16 @@
 		CB52842224DF90A200120A83 /* HMRecipeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB52842124DF90A200120A83 /* HMRecipeHeaderCell.swift */; };
 		CB52842424DF90A800120A83 /* HMRecipeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB52842324DF90A800120A83 /* HMRecipeHeaderCell.xib */; };
 		CB6AF74424D6BF18001C5115 /* HMPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6AF74324D6BF18001C5115 /* HMPhotoCollectionViewCell.swift */; };
+		CB78BF7124E2971F0082BCF5 /* HMRecipeStepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78BF6F24E2971F0082BCF5 /* HMRecipeStepCell.swift */; };
+		CB78BF7224E2971F0082BCF5 /* HMRecipeStepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB78BF7024E2971F0082BCF5 /* HMRecipeStepCell.xib */; };
+		CB78BF7524E2A2BD0082BCF5 /* HMRecipeTipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78BF7324E2A2BD0082BCF5 /* HMRecipeTipCell.swift */; };
+		CB78BF7624E2A2BD0082BCF5 /* HMRecipeTipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB78BF7424E2A2BD0082BCF5 /* HMRecipeTipCell.xib */; };
+		CB78BF7824E2B8940082BCF5 /* HMRecipeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78BF7724E2B8940082BCF5 /* HMRecipeTabBar.swift */; };
+		CB78BF7A24E2B89C0082BCF5 /* HMRecipeTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB78BF7924E2B89C0082BCF5 /* HMRecipeTabBar.xib */; };
+		CB78BF7D24E2DCF20082BCF5 /* HMRecipeCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78BF7B24E2DCF20082BCF5 /* HMRecipeCommentCell.swift */; };
+		CB78BF7E24E2DCF20082BCF5 /* HMRecipeCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB78BF7C24E2DCF20082BCF5 /* HMRecipeCommentCell.xib */; };
+		CB78BF8124E2DDF60082BCF5 /* HMRecipeCommentCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78BF7F24E2DDF60082BCF5 /* HMRecipeCommentCell1.swift */; };
+		CB78BF8224E2DDF60082BCF5 /* HMRecipeCommentCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB78BF8024E2DDF60082BCF5 /* HMRecipeCommentCell1.xib */; };
 		CB847D8C24E0E835004021B3 /* HMRecipeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB847D8B24E0E835004021B3 /* HMRecipeNavigationBar.swift */; };
 		CB847D8E24E0E83B004021B3 /* HMRecipeNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB847D8D24E0E83B004021B3 /* HMRecipeNavigationBar.xib */; };
 		CB847D9124E14969004021B3 /* HMRecipeGradientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB847D8F24E14969004021B3 /* HMRecipeGradientsCell.swift */; };
@@ -118,6 +128,16 @@
 		CB52842124DF90A200120A83 /* HMRecipeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeHeaderCell.swift; sourceTree = "<group>"; };
 		CB52842324DF90A800120A83 /* HMRecipeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipeHeaderCell.xib; sourceTree = "<group>"; };
 		CB6AF74324D6BF18001C5115 /* HMPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		CB78BF6F24E2971F0082BCF5 /* HMRecipeStepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeStepCell.swift; sourceTree = "<group>"; };
+		CB78BF7024E2971F0082BCF5 /* HMRecipeStepCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipeStepCell.xib; sourceTree = "<group>"; };
+		CB78BF7324E2A2BD0082BCF5 /* HMRecipeTipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeTipCell.swift; sourceTree = "<group>"; };
+		CB78BF7424E2A2BD0082BCF5 /* HMRecipeTipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipeTipCell.xib; sourceTree = "<group>"; };
+		CB78BF7724E2B8940082BCF5 /* HMRecipeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeTabBar.swift; sourceTree = "<group>"; };
+		CB78BF7924E2B89C0082BCF5 /* HMRecipeTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipeTabBar.xib; sourceTree = "<group>"; };
+		CB78BF7B24E2DCF20082BCF5 /* HMRecipeCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeCommentCell.swift; sourceTree = "<group>"; };
+		CB78BF7C24E2DCF20082BCF5 /* HMRecipeCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipeCommentCell.xib; sourceTree = "<group>"; };
+		CB78BF7F24E2DDF60082BCF5 /* HMRecipeCommentCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeCommentCell1.swift; sourceTree = "<group>"; };
+		CB78BF8024E2DDF60082BCF5 /* HMRecipeCommentCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipeCommentCell1.xib; sourceTree = "<group>"; };
 		CB847D8B24E0E835004021B3 /* HMRecipeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeNavigationBar.swift; sourceTree = "<group>"; };
 		CB847D8D24E0E83B004021B3 /* HMRecipeNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipeNavigationBar.xib; sourceTree = "<group>"; };
 		CB847D8F24E14969004021B3 /* HMRecipeGradientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeGradientsCell.swift; sourceTree = "<group>"; };
@@ -468,10 +488,20 @@
 			children = (
 				CB847D8B24E0E835004021B3 /* HMRecipeNavigationBar.swift */,
 				CB847D8D24E0E83B004021B3 /* HMRecipeNavigationBar.xib */,
+				CB78BF7724E2B8940082BCF5 /* HMRecipeTabBar.swift */,
+				CB78BF7924E2B89C0082BCF5 /* HMRecipeTabBar.xib */,
+				CB78BF6F24E2971F0082BCF5 /* HMRecipeStepCell.swift */,
+				CB78BF7024E2971F0082BCF5 /* HMRecipeStepCell.xib */,
 				CB52842124DF90A200120A83 /* HMRecipeHeaderCell.swift */,
 				CB52842324DF90A800120A83 /* HMRecipeHeaderCell.xib */,
 				CB847D8F24E14969004021B3 /* HMRecipeGradientsCell.swift */,
 				CB847D9024E14969004021B3 /* HMRecipeGradientsCell.xib */,
+				CB78BF7324E2A2BD0082BCF5 /* HMRecipeTipCell.swift */,
+				CB78BF7424E2A2BD0082BCF5 /* HMRecipeTipCell.xib */,
+				CB78BF7B24E2DCF20082BCF5 /* HMRecipeCommentCell.swift */,
+				CB78BF7C24E2DCF20082BCF5 /* HMRecipeCommentCell.xib */,
+				CB78BF7F24E2DDF60082BCF5 /* HMRecipeCommentCell1.swift */,
+				CB78BF8024E2DDF60082BCF5 /* HMRecipeCommentCell1.xib */,
 			);
 			path = "菜谱详情";
 			sourceTree = "<group>";
@@ -581,14 +611,19 @@
 			files = (
 				CB52841C24DD144A00120A83 /* HMSearchTableViewCell.xib in Resources */,
 				CB40AA9B24D1128B0082F560 /* LaunchScreen.storyboard in Resources */,
+				CB78BF7E24E2DCF20082BCF5 /* HMRecipeCommentCell.xib in Resources */,
+				CB78BF7224E2971F0082BCF5 /* HMRecipeStepCell.xib in Resources */,
 				CB40AA9824D1128B0082F560 /* Assets.xcassets in Resources */,
 				CB847D9224E14969004021B3 /* HMRecipeGradientsCell.xib in Resources */,
 				CB9A61F624D511F90088DDCA /* HMPhotoController.xib in Resources */,
 				CB918B3C24D9855B0054EFC7 /* HMHomeRecCollectionViewCell.xib in Resources */,
 				CB196E1724D1244200A643E1 /* HMHomeFollowCell.xib in Resources */,
 				CB847D8E24E0E83B004021B3 /* HMRecipeNavigationBar.xib in Resources */,
+				CB78BF8224E2DDF60082BCF5 /* HMRecipeCommentCell1.xib in Resources */,
+				CB78BF7624E2A2BD0082BCF5 /* HMRecipeTipCell.xib in Resources */,
 				CB52842424DF90A800120A83 /* HMRecipeHeaderCell.xib in Resources */,
 				CB40AAE524D113740082F560 /* HMNavSearchView.xib in Resources */,
+				CB78BF7A24E2B89C0082BCF5 /* HMRecipeTabBar.xib in Resources */,
 				CB52841224DBDE0000120A83 /* popularSearch.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -652,6 +687,7 @@
 				CB52842224DF90A200120A83 /* HMRecipeHeaderCell.swift in Sources */,
 				CB40AAEE24D113740082F560 /* SubjectsController.swift in Sources */,
 				CB40AA8F24D1128A0082F560 /* AppDelegate.swift in Sources */,
+				CB78BF7124E2971F0082BCF5 /* HMRecipeStepCell.swift in Sources */,
 				CB40AADF24D113740082F560 /* HMHomeAPI.swift in Sources */,
 				CB40AAD724D113740082F560 /* MarketController.swift in Sources */,
 				CB40AAD924D113740082F560 /* GroupController.swift in Sources */,
@@ -659,6 +695,7 @@
 				CB40AAEB24D113740082F560 /* HMTabBar.swift in Sources */,
 				CB52841024DBA72900120A83 /* HMSearchFirstController.swift in Sources */,
 				CB196E1324D123B400A643E1 /* HMHomeFollowController.swift in Sources */,
+				CB78BF7824E2B8940082BCF5 /* HMRecipeTabBar.swift in Sources */,
 				CB40AADA24D113740082F560 /* HMPageView.swift in Sources */,
 				CB196E1B24D15FCA00A643E1 /* HMHomeFollowModel.swift in Sources */,
 				CB40AAE424D113740082F560 /* HMNavSearchView.swift in Sources */,
@@ -666,6 +703,7 @@
 				CB40AAE224D113740082F560 /* HMHomeRecController.swift in Sources */,
 				CB40AAE024D113740082F560 /* HomeController.swift in Sources */,
 				CB40AAE724D113740082F560 /* const.swift in Sources */,
+				CB78BF7524E2A2BD0082BCF5 /* HMRecipeTipCell.swift in Sources */,
 				CB9A61F524D511F90088DDCA /* HMPhotoController.swift in Sources */,
 				CB9A61F824D66EE30088DDCA /* HMPhotoCollectionViewLayout.swift in Sources */,
 				CB196E2124D3C3DC00A643E1 /* HMHomeFollowCollectionViewCell.swift in Sources */,
@@ -677,6 +715,8 @@
 				CB40AAED24D113740082F560 /* HMTabbarController.swift in Sources */,
 				CB40AAEA24D113740082F560 /* HMTabBarButton.swift in Sources */,
 				CB02757424DA4D3A0054F78A /* HMRecipeCatogoryController.swift in Sources */,
+				CB78BF8124E2DDF60082BCF5 /* HMRecipeCommentCell1.swift in Sources */,
+				CB78BF7D24E2DCF20082BCF5 /* HMRecipeCommentCell.swift in Sources */,
 				CB40AA9124D1128A0082F560 /* SceneDelegate.swift in Sources */,
 				CB52842024DE873F00120A83 /* HMRecipeDetailModel.swift in Sources */,
 				CBDE1C0A24DACC26002A9DBD /* HMSearchRecipeModel.swift in Sources */,

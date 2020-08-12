@@ -15,7 +15,7 @@
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lbg-hA-RNy">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
-                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.94402825342465757" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="BJ2-Zx-OWS"/>
                     </constraints>
@@ -77,7 +77,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-10-30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9c-AN-TZO" userLabel="2019-10-30">
-                    <rect key="frame" x="95" y="477.5" width="133" height="20"/>
+                    <rect key="frame" x="98" y="477.5" width="133" height="20"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="133" id="N0C-T4-Izm"/>
@@ -154,7 +154,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="c9c-AN-TZO" firstAttribute="leading" secondItem="lZs-DZ-oZ9" secondAttribute="leading" id="8GK-Ex-RYn"/>
+                <constraint firstItem="c9c-AN-TZO" firstAttribute="leading" secondItem="lZs-DZ-oZ9" secondAttribute="leading" constant="3" id="8GK-Ex-RYn"/>
                 <constraint firstItem="Qr3-n7-xRz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Fhp-bU-SbP"/>
                 <constraint firstItem="WEK-6s-WvG" firstAttribute="top" secondItem="Lbg-hA-RNy" secondAttribute="bottom" constant="25" id="GJq-dB-OFg"/>
                 <constraint firstItem="WEK-6s-WvG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HUF-il-0ZO"/>

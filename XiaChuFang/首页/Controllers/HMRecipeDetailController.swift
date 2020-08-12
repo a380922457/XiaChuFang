@@ -13,6 +13,7 @@ class HMRecipeDetailController: UITableViewController {
     var heights = [CGFloat]()
     var model: HMRecipeDetailModel?
     var navBar: HMRecipeNavigationBar?
+    var tabBar: HMRecipeTabBar?
     var imageheight: CGFloat?
     
     convenience init(id: String){
@@ -23,7 +24,7 @@ class HMRecipeDetailController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNav()
+        setupBars()
         
         setupTableView()
         
@@ -36,6 +37,7 @@ class HMRecipeDetailController: UITableViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
         tabBarController?.tabBar.isHidden = true
         UIApplication.shared.windows[0].addSubview(navBar!)
+        UIApplication.shared.windows[0].addSubview(tabBar!)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -43,6 +45,7 @@ class HMRecipeDetailController: UITableViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
         tabBarController?.tabBar.isHidden = false
         navBar!.removeFromSuperview()
+        tabBar!.removeFromSuperview()
     }
     
     func setupTableView(){
@@ -52,27 +55,64 @@ class HMRecipeDetailController: UITableViewController {
         
         tableView.register(UINib.init(nibName: "HMRecipeHeaderCell", bundle: nil), forCellReuseIdentifier: "HMRecipeHeaderCell")
         tableView.register(UINib.init(nibName: "HMRecipeGradientsCell", bundle: nil), forCellReuseIdentifier: "HMRecipeGradientsCell")
+        tableView.register(UINib.init(nibName: "HMRecipeStepCell", bundle: nil), forCellReuseIdentifier: "HMRecipeStepCell")
+        tableView.register(UINib.init(nibName: "HMRecipeTipCell", bundle: nil), forCellReuseIdentifier: "HMRecipeTipCell")
+        tableView.register(UINib.init(nibName: "HMRecipeCommentCell", bundle: nil), forCellReuseIdentifier: "HMRecipeCommentCell")
+        
     }
     
    
-    func setupNav(){
+    func setupBars(){
         navBar = HMRecipeNavigationBar.loadFromNib()
         navBar!.frame = navigationController!.navigationBar.frame
         navBar!.delegate = self
+        
+        tabBar = HMRecipeTabBar.loadFromNib()
+        tabBar!.frame = tabBarController!.tabBar.frame
+        tabBar!.frame.origin.y += 20
+        tabBar!.frame.size.height -= 20
+        
     }
     
     func cacheHeights(){
-        for i in 0..<2{
+        let count = 4 + (model?.steps.count ?? 0)
+        for i in 0..<count{
             if i == 0{
+                // 计算headerView的高度
                 let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeHeaderCell") as! HMRecipeHeaderCell
                 cell.model = model
                 cell.layoutIfNeeded()
                 heights.append(cell.my_textLabel.frame.maxY)
             }else if i == 1{
+                // 计算原材料cell的高度
                 let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeGradientsCell") as! HMRecipeGradientsCell
                 cell.model = model
                 cell.layoutIfNeeded()
                 heights.append(cell.gradientsTableView.frame.maxY)
+            }else if i < count - 2{
+                // 计算步骤cell的高度
+                let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeStepCell") as! HMRecipeStepCell
+                cell.curIndex = i - 1
+                cell.model = model
+                cell.layoutIfNeeded()
+                heights.append(cell.separationLine.frame.maxY)
+            }else if i == count - 2{
+                // 计算小贴士cell的高度
+                if model?.smallTip == nil{
+                    // 小贴士可能不存在
+                    heights.append(0)
+                }else{
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeTipCell") as! HMRecipeTipCell
+                    cell.model = model
+                    cell.layoutIfNeeded()
+                    heights.append(cell.my_contentView.frame.maxY)
+                }
+            }else if i == count - 1{
+                // 计算评论cell的高度
+                let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeCommentCell") as! HMRecipeCommentCell
+                cell.model = model
+                cell.layoutIfNeeded()
+                heights.append(cell.commentButton.frame.maxY)
             }
         }
     }
@@ -91,7 +131,7 @@ extension HMRecipeDetailController{
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 4 + (model?.steps.count ?? 0)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -99,7 +139,6 @@ extension HMRecipeDetailController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeHeaderCell", for: indexPath) as! HMRecipeHeaderCell
             cell.model = model
@@ -107,6 +146,19 @@ extension HMRecipeDetailController{
             return cell
         }else if indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeGradientsCell", for: indexPath) as! HMRecipeGradientsCell
+            cell.model = model
+            return cell
+        }else if indexPath.row < 2 + (model?.steps.count ?? 0){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeStepCell") as! HMRecipeStepCell
+            cell.curIndex = indexPath.row - 1
+            cell.model = model
+            return cell
+        }else if indexPath.row == 2 + (model?.steps.count ?? 0){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeTipCell") as! HMRecipeTipCell
+            cell.model = model
+            return cell
+        }else if indexPath.row == 3 + (model?.steps.count ?? 0){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeCommentCell") as! HMRecipeCommentCell
             cell.model = model
             return cell
         }
