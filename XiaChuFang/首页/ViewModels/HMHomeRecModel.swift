@@ -9,16 +9,27 @@
 import Foundation
 import HandyJSON
 
+struct HMVideoOuter: HandyJSON {
+    var recommend_content: HMRecModel?
+}
+
 struct HMOuterModel: HandyJSON {
     var object: HMRecModel?
 }
+
+struct HMExtra: HandyJSON {
+    var is_video_recipe: Bool?
+    var n_collects: String?
+    var extra_icon_value: String?
+}
+
 
 struct HMRecModel: HandyJSON {
     var title_1st: String?
     var title_3rd: String?
     var image: HMPhoto?
     var author: Dictionary<String, Dictionary<String, String>>?
-    var extra: Dictionary<String, String>?
+    var extra: HMExtra?
     
     var authorName: String?{
         return title_3rd

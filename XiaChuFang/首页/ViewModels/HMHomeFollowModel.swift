@@ -89,5 +89,8 @@ struct HMPhoto: HandyJSON {
     var ratio: CGFloat{
         return original_height! / original_width!
     }
+    var image_url: String{
+        return "http://i2.chuimg.com/" + self.ident!
+    }
 }
 

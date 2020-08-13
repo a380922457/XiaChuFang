@@ -58,6 +58,7 @@ class HMRecipeDetailController: UITableViewController {
         tableView.register(UINib.init(nibName: "HMRecipeStepCell", bundle: nil), forCellReuseIdentifier: "HMRecipeStepCell")
         tableView.register(UINib.init(nibName: "HMRecipeTipCell", bundle: nil), forCellReuseIdentifier: "HMRecipeTipCell")
         tableView.register(UINib.init(nibName: "HMRecipeCommentCell", bundle: nil), forCellReuseIdentifier: "HMRecipeCommentCell")
+        tableView.register(UINib.init(nibName: "HMRecipePeopleCookCell", bundle: nil), forCellReuseIdentifier: "HMRecipePeopleCookCell")
         
     }
     
@@ -75,8 +76,8 @@ class HMRecipeDetailController: UITableViewController {
     }
     
     func cacheHeights(){
-        let count = 4 + (model?.steps.count ?? 0)
-        for i in 0..<count{
+        let stepCount = (model?.steps.count ?? 0)
+        for i in 0..<(5 + stepCount){
             if i == 0{
                 // 计算headerView的高度
                 let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeHeaderCell") as! HMRecipeHeaderCell
@@ -89,14 +90,14 @@ class HMRecipeDetailController: UITableViewController {
                 cell.model = model
                 cell.layoutIfNeeded()
                 heights.append(cell.gradientsTableView.frame.maxY)
-            }else if i < count - 2{
+            }else if i < stepCount + 2{
                 // 计算步骤cell的高度
                 let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeStepCell") as! HMRecipeStepCell
                 cell.curIndex = i - 1
                 cell.model = model
                 cell.layoutIfNeeded()
                 heights.append(cell.separationLine.frame.maxY)
-            }else if i == count - 2{
+            }else if i == stepCount + 2{
                 // 计算小贴士cell的高度
                 if model?.smallTip == nil{
                     // 小贴士可能不存在
@@ -107,12 +108,27 @@ class HMRecipeDetailController: UITableViewController {
                     cell.layoutIfNeeded()
                     heights.append(cell.my_contentView.frame.maxY)
                 }
-            }else if i == count - 1{
+            }else if i == stepCount + 3{
                 // 计算评论cell的高度
                 let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeCommentCell") as! HMRecipeCommentCell
                 cell.model = model
-                cell.layoutIfNeeded()
-                heights.append(cell.commentButton.frame.maxY)
+                if model?.comments.count == 0{
+                    heights.append(0)
+                }else{
+                    cell.layoutIfNeeded()
+                    heights.append(cell.commentButton.frame.maxY)
+                }
+
+            }else if i == stepCount + 4{
+                // 计算大家作品cell的高度
+                let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipePeopleCookCell") as! HMRecipePeopleCookCell
+                cell.model = model
+                if model?.peoples.count == 0{
+                    heights.append(0)
+                }else{
+                    cell.layoutIfNeeded()
+                    heights.append(cell.collectionView.frame.maxY)
+                }
             }
         }
     }
@@ -131,7 +147,7 @@ extension HMRecipeDetailController{
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4 + (model?.steps.count ?? 0)
+        return 5 + (model?.steps.count ?? 0)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -161,6 +177,10 @@ extension HMRecipeDetailController{
             let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipeCommentCell") as! HMRecipeCommentCell
             cell.model = model
             return cell
+        }else if indexPath.row == 4 + (model?.steps.count ?? 0){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HMRecipePeopleCookCell") as! HMRecipePeopleCookCell
+            cell.model = model
+            return cell
         }
         
         return UITableViewCell()
@@ -180,6 +200,10 @@ extension HMRecipeDetailController{
         }
         self.setNeedsStatusBarAppearanceUpdate()
 
+        
+        // 修改tableview的contentSize，因为tabbar会挡住
+        tableView.contentSize.height = heights.reduce(0, +) + 55
+        
     }
 }
 

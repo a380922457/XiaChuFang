@@ -37,9 +37,12 @@ class HMPhotoController: UIViewController {
         scrollViewDidEndDecelerating(collectionView)
         navigationController?.navigationBar.isHidden = true
         tabBarController?.tabBar.isHidden = true
+        
 
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .darkContent
+    }
 }
 
 extension HMPhotoController: UICollectionViewDataSource{

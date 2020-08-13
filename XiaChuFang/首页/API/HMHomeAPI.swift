@@ -16,8 +16,9 @@ let HMHomeProvider = MoyaProvider<HMHomeAPI>()
 enum HMHomeAPI {
     case followList //关注列表
     case rec //推荐列表
-    case search // 查找
-    case changeOtherCategory(categoryId:Int) // 更换其他
+    case video // 视频界面
+    case kitchen_activities // 查找
+//    case changeOtherCategory(categoryId:Int) // 更换其他
 }
 
 
@@ -25,8 +26,6 @@ extension HMHomeAPI: TargetType {
     //服务器地址
     public var baseURL: URL {
         switch self {
-        case .followList:
-            return URL(string: "https://api.xiachufang.com")!
         default:
             return URL(string: "https://api.xiachufang.com")!
         }
@@ -36,60 +35,61 @@ extension HMHomeAPI: TargetType {
         switch self {
         case .followList: return "/v2/account/feeds_v6.json"
         case .rec: return "/v2/homepage1810/paged_waterfall_recommendations.json"
-        case .changeOtherCategory(let categoryId): return "1"
-//        case .search: return "/v2/categories/explorations_v2.json"
-        case .search: return "/v2/search/universal_search_v2.json"
+        case .video: return "/v2/city/get_same_city_recommendations.json"
+        case .kitchen_activities: return "/v2/homepage1810/dish/init_page.json"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .search:
-            return .post
         default:
             return .get
         }
     }
     var task: Task {
         var parameters:[String:Any] = [
-            "_ts":"1596096925.035904",
             "api_key":"07397197043fafe11ce5c65c10febf84",
-            "api_sign":"a2669eb6be6a5be31291a33b3485f440",
             "location_code":"156110000000000",
-            "nonce":"38BDB913-719E-45CE-B82D-7F9BB7649A64",
             "origin":"iphone",
-            "size":20,
             "timezone":"Asia/Shanghai",
             "version":"237.5.0",
             "webp":1,
-        "sk":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOjgxMDIzMTc0LCJ1aWQiOjEwNDEyNjcyMywiaWF0IjoxNTk1OTkyOTAzLjAsIm8iOjJ9.ezRZ2q1iNjWtLnQY2Wlwh1-JooIshNAhiVs00jVca_4"]
+            ]
         switch self {
         case .followList:
-            break
+            parameters["_ts"] = "1597320495.553144"
+            parameters["api_sign"] = "2de47dd8e186576c93d9d2a00b56f702"
+            parameters["nonce"] = "15A5CE2B-B0E5-4C55-82F9-E9E444533D48"
+            parameters["size"] = 20
+            parameters["sk"] = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOjgyNDQxODM0LCJ1aWQiOjEwNDEyNjcyMywiaWF0IjoxNTk3MzA0MjEzLjAsIm8iOjJ9._O3E5bXq0oB8KpDF6DBz4aaAAV7rE3yrRnR7pd9ybLw"
         case .rec:
-            parameters["_ts"] = "1596503887.838563"
-            parameters["api_sign"] = "2e07632f87046bcdf994dc389717beb6"
-            parameters["nonce"] = "471CC518-F5E9-477C-B805-417238BC2EAE"
+            parameters["_ts"] = "1597320802.125984"
+            parameters["api_sign"] = "96e6642662df8bccc75d419230c81841"
+            parameters["nonce"] = "245017E8-D6F9-4338-9B8C-55E23D0BE100"
             parameters["cursor"] = ""
-        case .search:
-            parameters["search_type"] = 1091
-            parameters["q"] = "辣椒炒肉"
-//            parameters["origin"] = "iphone"
-            parameters["_ts"] = "1596600745.552623"
-            parameters["api_sign"] = "b3af7f4c746868e3878f8f13c3645d17"
-            parameters["nonce"] = "B7918B8A-1025-498A-A764-7E7C45CDF4BD"
+            parameters["size"] = 20
+            parameters["sk"] = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOjgyNDQxODM0LCJ1aWQiOjEwNDEyNjcyMywiaWF0IjoxNTk3MzA0MjEzLjAsIm8iOjJ9._O3E5bXq0oB8KpDF6DBz4aaAAV7rE3yrRnR7pd9ybLw"
+        case .video:
+            parameters["_ts"] = "1597304226.088708"
+            parameters["api_sign"] = "da1879e2a0f641868406f3788a612bed"
+            parameters["nonce"] = "20A8E5BC-4A97-45B9-84D6-C264E1759BCD"
             parameters["cursor"] = ""
-            parameters["ifa"] = "AC84AD64-3941-4035-BADD-988946F713EE"
-
+            parameters["sk"] = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOjgyNDQxODM0LCJ1aWQiOjEwNDEyNjcyMywiaWF0IjoxNTk3MzA0MjEzLjAsIm8iOjJ9._O3E5bXq0oB8KpDF6DBz4aaAAV7rE3yrRnR7pd9ybLw"
+            parameters["size"] = 20
+        case .kitchen_activities:
+            parameters["_ts"] = "1597304226.084011"
+            parameters["api_sign"] = "bc713907b03980f5098b6e554bc3e36e"
+            parameters["nonce"] = "B2F69EE1-B470-4DBE-820A-18A5F9AF51AF"
+            parameters["sk"] = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOjgyNDQxODM0LCJ1aWQiOjEwNDEyNjcyMywiaWF0IjoxNTk3MzA0MjEzLjAsIm8iOjJ9._O3E5bXq0oB8KpDF6DBz4aaAAV7rE3yrRnR7pd9ybLw"
             
-        case .changeOtherCategory(let categoryId):
-            parameters = [
-                "xt": Int32(Date().timeIntervalSince1970),
-                "deviceId": UIDevice.current.identifierForVendor!.uuidString
-            ]
-            parameters["categoryId"] = categoryId
+//        case .changeOtherCategory(let categoryId):
+//            parameters = [
+//                "xt": Int32(Date().timeIntervalSince1970),
+//                "deviceId": UIDevice.current.identifierForVendor!.uuidString
+//            ]
+//            parameters["categoryId"] = categoryId
+//        }
         }
-        
 
         return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
     }

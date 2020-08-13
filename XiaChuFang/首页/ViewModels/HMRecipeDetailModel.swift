@@ -9,7 +9,14 @@
 import Foundation
 import Ji
 
-
+public struct HMPeople {
+    var imageUrl: String?
+    var authorName: String?
+    var authorImageUrl: String?
+    var authorText: String?
+    var likeNumber: String?
+    var time: String?
+}
 
 struct HMRecipeDetailModel {
     
@@ -20,16 +27,15 @@ struct HMRecipeDetailModel {
         var likeNumber: String?
     }
     
+    
+    
     var imageUrl: String?
+    
     var imageRatio: Float?{
         let items = imageUrl?.split(separator: "_")
-        
         let width = items![1].prefix(while: { (c) -> Bool in return c != "w"})
-        
         let height = items![2].prefix(while: { (c) -> Bool in return c != "h"})
-        
         return Float(height)! / Float(width)!
-        
     }
     var title: String?
     var doneNumber: String?
@@ -48,7 +54,7 @@ struct HMRecipeDetailModel {
     var smallTip: String?
     
     var comments = [HMComment]()
-
+    var peoples = [HMPeople]()
     
     static func getModel(id: String) -> Self{
         var model = HMRecipeDetailModel()
@@ -141,6 +147,29 @@ struct HMRecipeDetailModel {
             let text = authorTexts?[i].content!.trimmingCharacters(in: ["\n", " "])
             let number = likeNumbers?[i].content
             model.comments.append(HMComment(authorImageUrl: imageUrl, authorName: name, authorText: text, likeNumber: number))
+        }
+        
+        // 大家做的
+        let urlPeople = "https://www.xiachufang.com/recipe/\(id)/dishes".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
+        let jiDocPeople = Ji(htmlURL: URL(string: urlPeople)!)!
+        
+        let descs = jiDocPeople.xPath("//p[@class='desc']")
+        let imageUrls = jiDocPeople.xPath("//div[@class='cover']")!
+        let times = jiDocPeople.xPath("//p[@class='pure-u-1-2']")!
+        let authorNamesP = jiDocPeople.xPath("//div[@class='author clearfix ellipsis']")
+        let likes = jiDocPeople.xPath("//span[@class='n-diggs']")
+        
+        for i in 0..<min(10, jiDocPeople.xPath("//p[@class='desc']")!.count){
+            var people = HMPeople()
+            people.authorText = descs?[i].content?.trimmingCharacters(in: ["\n", " "])
+            people.imageUrl = imageUrls[i].xPath("img").first?.attributes["data-src"]
+            people.time = times[i].content
+            people.authorName = authorNamesP?[i].xPath("a").first?.attributes["title"]
+            people.authorImageUrl = authorNamesP?[i].xPath("a").first?.xPath("img").first?.attributes["data-src"]
+            people.likeNumber = likes?[i].content
+            
+            model.peoples.append(people)
         }
         
         return model

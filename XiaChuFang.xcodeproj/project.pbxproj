@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B87E09403C0AB1AFFEAACF76 /* Pods_XiaChuFang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBA99A9F3C9F525CCA5172D /* Pods_XiaChuFang.framework */; };
 		CB02757424DA4D3A0054F78A /* HMRecipeCatogoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB02757324DA4D3A0054F78A /* HMRecipeCatogoryController.swift */; };
+		CB0AB54824E4DB6F00F0D26C /* HMHomeVideoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0AB54724E4DB6F00F0D26C /* HMHomeVideoController.xib */; };
 		CB196E1324D123B400A643E1 /* HMHomeFollowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1224D123B400A643E1 /* HMHomeFollowController.swift */; };
 		CB196E1624D1244200A643E1 /* HMHomeFollowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1424D1244200A643E1 /* HMHomeFollowCell.swift */; };
 		CB196E1724D1244200A643E1 /* HMHomeFollowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB196E1524D1244200A643E1 /* HMHomeFollowCell.xib */; };
@@ -16,6 +17,8 @@
 		CB196E1B24D15FCA00A643E1 /* HMHomeFollowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1A24D15FCA00A643E1 /* HMHomeFollowModel.swift */; };
 		CB196E1F24D3C04D00A643E1 /* HMCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E1E24D3C04D00A643E1 /* HMCollectionViewFlowLayout.swift */; };
 		CB196E2124D3C3DC00A643E1 /* HMHomeFollowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB196E2024D3C3DC00A643E1 /* HMHomeFollowCollectionViewCell.swift */; };
+		CB31266F24E4E3F70072ECAA /* HMHomeVideoBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31266E24E4E3F70072ECAA /* HMHomeVideoBannerModel.swift */; };
+		CB31267224E50D970072ECAA /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = CB31267124E50D970072ECAA /* timg.gif */; };
 		CB40AA8F24D1128A0082F560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AA8E24D1128A0082F560 /* AppDelegate.swift */; };
 		CB40AA9124D1128A0082F560 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB40AA9024D1128A0082F560 /* SceneDelegate.swift */; };
 		CB40AA9824D1128B0082F560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB40AA9724D1128B0082F560 /* Assets.xcassets */; };
@@ -51,6 +54,10 @@
 		CB52842024DE873F00120A83 /* HMRecipeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB52841F24DE873F00120A83 /* HMRecipeDetailModel.swift */; };
 		CB52842224DF90A200120A83 /* HMRecipeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB52842124DF90A200120A83 /* HMRecipeHeaderCell.swift */; };
 		CB52842424DF90A800120A83 /* HMRecipeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB52842324DF90A800120A83 /* HMRecipeHeaderCell.xib */; };
+		CB54B90024E3D24100B64690 /* HMRecipePeopleCookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB54B8FE24E3D24100B64690 /* HMRecipePeopleCookCell.swift */; };
+		CB54B90124E3D24100B64690 /* HMRecipePeopleCookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB54B8FF24E3D24100B64690 /* HMRecipePeopleCookCell.xib */; };
+		CB54B90424E3E6ED00B64690 /* HMRecipePeopleMakeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB54B90224E3E6ED00B64690 /* HMRecipePeopleMakeCollectionCell.swift */; };
+		CB54B90524E3E6ED00B64690 /* HMRecipePeopleMakeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB54B90324E3E6ED00B64690 /* HMRecipePeopleMakeCollectionCell.xib */; };
 		CB6AF74424D6BF18001C5115 /* HMPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6AF74324D6BF18001C5115 /* HMPhotoCollectionViewCell.swift */; };
 		CB78BF7124E2971F0082BCF5 /* HMRecipeStepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78BF6F24E2971F0082BCF5 /* HMRecipeStepCell.swift */; };
 		CB78BF7224E2971F0082BCF5 /* HMRecipeStepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB78BF7024E2971F0082BCF5 /* HMRecipeStepCell.xib */; };
@@ -83,6 +90,7 @@
 		7C8AF2E3F060D5BC7F2D8E95 /* Pods-XiaChuFang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaChuFang.release.xcconfig"; path = "Target Support Files/Pods-XiaChuFang/Pods-XiaChuFang.release.xcconfig"; sourceTree = "<group>"; };
 		9F6294BDC18DABAFAE39DA4F /* Pods-XiaChuFang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaChuFang.debug.xcconfig"; path = "Target Support Files/Pods-XiaChuFang/Pods-XiaChuFang.debug.xcconfig"; sourceTree = "<group>"; };
 		CB02757324DA4D3A0054F78A /* HMRecipeCatogoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeCatogoryController.swift; sourceTree = "<group>"; };
+		CB0AB54724E4DB6F00F0D26C /* HMHomeVideoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMHomeVideoController.xib; sourceTree = "<group>"; };
 		CB196E1224D123B400A643E1 /* HMHomeFollowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowController.swift; sourceTree = "<group>"; };
 		CB196E1424D1244200A643E1 /* HMHomeFollowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowCell.swift; sourceTree = "<group>"; };
 		CB196E1524D1244200A643E1 /* HMHomeFollowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMHomeFollowCell.xib; sourceTree = "<group>"; };
@@ -90,6 +98,9 @@
 		CB196E1A24D15FCA00A643E1 /* HMHomeFollowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowModel.swift; sourceTree = "<group>"; };
 		CB196E1E24D3C04D00A643E1 /* HMCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		CB196E2024D3C3DC00A643E1 /* HMHomeFollowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeFollowCollectionViewCell.swift; sourceTree = "<group>"; };
+		CB31266E24E4E3F70072ECAA /* HMHomeVideoBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHomeVideoBannerModel.swift; sourceTree = "<group>"; };
+		CB31267124E50D970072ECAA /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timg.gif; sourceTree = "<group>"; };
+		CB31267324E50E620072ECAA /* timg.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = timg.webp; sourceTree = "<group>"; };
 		CB40AA8B24D1128A0082F560 /* 下厨房.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "下厨房.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB40AA8E24D1128A0082F560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB40AA9024D1128A0082F560 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +138,10 @@
 		CB52841F24DE873F00120A83 /* HMRecipeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeDetailModel.swift; sourceTree = "<group>"; };
 		CB52842124DF90A200120A83 /* HMRecipeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeHeaderCell.swift; sourceTree = "<group>"; };
 		CB52842324DF90A800120A83 /* HMRecipeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipeHeaderCell.xib; sourceTree = "<group>"; };
+		CB54B8FE24E3D24100B64690 /* HMRecipePeopleCookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipePeopleCookCell.swift; sourceTree = "<group>"; };
+		CB54B8FF24E3D24100B64690 /* HMRecipePeopleCookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipePeopleCookCell.xib; sourceTree = "<group>"; };
+		CB54B90224E3E6ED00B64690 /* HMRecipePeopleMakeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipePeopleMakeCollectionCell.swift; sourceTree = "<group>"; };
+		CB54B90324E3E6ED00B64690 /* HMRecipePeopleMakeCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipePeopleMakeCollectionCell.xib; sourceTree = "<group>"; };
 		CB6AF74324D6BF18001C5115 /* HMPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		CB78BF6F24E2971F0082BCF5 /* HMRecipeStepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeStepCell.swift; sourceTree = "<group>"; };
 		CB78BF7024E2971F0082BCF5 /* HMRecipeStepCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipeStepCell.xib; sourceTree = "<group>"; };
@@ -213,6 +228,8 @@
 				CB40AACC24D113730082F560 /* Main */,
 				CB40AAC724D113730082F560 /* Other */,
 				CB40AA9724D1128B0082F560 /* Assets.xcassets */,
+				CB31267324E50E620072ECAA /* timg.webp */,
+				CB31267124E50D970072ECAA /* timg.gif */,
 				CB40AA9924D1128B0082F560 /* LaunchScreen.storyboard */,
 				CB40AA9C24D1128B0082F560 /* Info.plist */,
 				CB52841124DBDE0000120A83 /* popularSearch.plist */,
@@ -369,6 +386,7 @@
 			children = (
 				CB196E1A24D15FCA00A643E1 /* HMHomeFollowModel.swift */,
 				CB918B2724D8F31B0054EFC7 /* HMHomeRecModel.swift */,
+				CB31266E24E4E3F70072ECAA /* HMHomeVideoBannerModel.swift */,
 				CBDE1C0924DACC26002A9DBD /* HMSearchRecipeModel.swift */,
 				CB52841F24DE873F00120A83 /* HMRecipeDetailModel.swift */,
 			);
@@ -390,6 +408,7 @@
 				CB196E1224D123B400A643E1 /* HMHomeFollowController.swift */,
 				CB40AAC224D113730082F560 /* HMHomeRecController.swift */,
 				CB196E1824D151AA00A643E1 /* HMHomeVideoController.swift */,
+				CB0AB54724E4DB6F00F0D26C /* HMHomeVideoController.xib */,
 				CB02757324DA4D3A0054F78A /* HMRecipeCatogoryController.swift */,
 				CB52840F24DBA72900120A83 /* HMSearchFirstController.swift */,
 				CB52841524DCFA8200120A83 /* HMSearchSecondController.swift */,
@@ -502,6 +521,10 @@
 				CB78BF7C24E2DCF20082BCF5 /* HMRecipeCommentCell.xib */,
 				CB78BF7F24E2DDF60082BCF5 /* HMRecipeCommentCell1.swift */,
 				CB78BF8024E2DDF60082BCF5 /* HMRecipeCommentCell1.xib */,
+				CB54B8FE24E3D24100B64690 /* HMRecipePeopleCookCell.swift */,
+				CB54B8FF24E3D24100B64690 /* HMRecipePeopleCookCell.xib */,
+				CB54B90224E3E6ED00B64690 /* HMRecipePeopleMakeCollectionCell.swift */,
+				CB54B90324E3E6ED00B64690 /* HMRecipePeopleMakeCollectionCell.xib */,
 			);
 			path = "菜谱详情";
 			sourceTree = "<group>";
@@ -612,17 +635,21 @@
 				CB52841C24DD144A00120A83 /* HMSearchTableViewCell.xib in Resources */,
 				CB40AA9B24D1128B0082F560 /* LaunchScreen.storyboard in Resources */,
 				CB78BF7E24E2DCF20082BCF5 /* HMRecipeCommentCell.xib in Resources */,
+				CB54B90524E3E6ED00B64690 /* HMRecipePeopleMakeCollectionCell.xib in Resources */,
 				CB78BF7224E2971F0082BCF5 /* HMRecipeStepCell.xib in Resources */,
 				CB40AA9824D1128B0082F560 /* Assets.xcassets in Resources */,
 				CB847D9224E14969004021B3 /* HMRecipeGradientsCell.xib in Resources */,
 				CB9A61F624D511F90088DDCA /* HMPhotoController.xib in Resources */,
+				CB0AB54824E4DB6F00F0D26C /* HMHomeVideoController.xib in Resources */,
 				CB918B3C24D9855B0054EFC7 /* HMHomeRecCollectionViewCell.xib in Resources */,
 				CB196E1724D1244200A643E1 /* HMHomeFollowCell.xib in Resources */,
 				CB847D8E24E0E83B004021B3 /* HMRecipeNavigationBar.xib in Resources */,
 				CB78BF8224E2DDF60082BCF5 /* HMRecipeCommentCell1.xib in Resources */,
 				CB78BF7624E2A2BD0082BCF5 /* HMRecipeTipCell.xib in Resources */,
 				CB52842424DF90A800120A83 /* HMRecipeHeaderCell.xib in Resources */,
+				CB54B90124E3D24100B64690 /* HMRecipePeopleCookCell.xib in Resources */,
 				CB40AAE524D113740082F560 /* HMNavSearchView.xib in Resources */,
+				CB31267224E50D970072ECAA /* timg.gif in Resources */,
 				CB78BF7A24E2B89C0082BCF5 /* HMRecipeTabBar.xib in Resources */,
 				CB52841224DBDE0000120A83 /* popularSearch.plist in Resources */,
 			);
@@ -684,6 +711,7 @@
 				CB847D9124E14969004021B3 /* HMRecipeGradientsCell.swift in Sources */,
 				CB40AAD824D113740082F560 /* MineController.swift in Sources */,
 				CB52841624DCFA8200120A83 /* HMSearchSecondController.swift in Sources */,
+				CB54B90024E3D24100B64690 /* HMRecipePeopleCookCell.swift in Sources */,
 				CB52842224DF90A200120A83 /* HMRecipeHeaderCell.swift in Sources */,
 				CB40AAEE24D113740082F560 /* SubjectsController.swift in Sources */,
 				CB40AA8F24D1128A0082F560 /* AppDelegate.swift in Sources */,
@@ -701,8 +729,10 @@
 				CB40AAE424D113740082F560 /* HMNavSearchView.swift in Sources */,
 				CB40AADD24D113740082F560 /* HMPageContentView.swift in Sources */,
 				CB40AAE224D113740082F560 /* HMHomeRecController.swift in Sources */,
+				CB31266F24E4E3F70072ECAA /* HMHomeVideoBannerModel.swift in Sources */,
 				CB40AAE024D113740082F560 /* HomeController.swift in Sources */,
 				CB40AAE724D113740082F560 /* const.swift in Sources */,
+				CB54B90424E3E6ED00B64690 /* HMRecipePeopleMakeCollectionCell.swift in Sources */,
 				CB78BF7524E2A2BD0082BCF5 /* HMRecipeTipCell.swift in Sources */,
 				CB9A61F524D511F90088DDCA /* HMPhotoController.swift in Sources */,
 				CB9A61F824D66EE30088DDCA /* HMPhotoCollectionViewLayout.swift in Sources */,
@@ -867,6 +897,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36NRA493A7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
 				INFOPLIST_FILE = XiaChuFang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -886,6 +920,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36NRA493A7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
 				INFOPLIST_FILE = XiaChuFang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

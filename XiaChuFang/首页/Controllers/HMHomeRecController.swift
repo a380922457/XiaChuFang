@@ -22,7 +22,6 @@ class HMHomeRecController: UIViewController {
         collectionView.dataSource = self
         collectionView.backgroundColor = .white
         collectionView.register(UINib.init(nibName: "HMHomeRecCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: ID)
-        
         return collectionView
     }()
     
