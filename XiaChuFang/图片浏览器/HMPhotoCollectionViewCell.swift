@@ -48,6 +48,7 @@ class HMPhotoCollectionViewCell: UICollectionViewCell {
             my_imageView.kf.setImage(with: URL(string: imageUrl!))
             
             contentView.addSubview(scrollView)
+            
         }
     }
     
