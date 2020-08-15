@@ -9,16 +9,36 @@
 import UIKit
 import SwiftyJSON
 import HandyJSON
+import MJRefresh
 
 class HMHomeFollowController: UITableViewController {
     
-    let cellID = "cellID"
     var models = [HMHomeFollowModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib.init(nibName: "HMHomeFollowCell", bundle: Bundle.main), forCellReuseIdentifier: cellID)
+        setupTableView()
+        observePhotoClick()
+    }
+}
+
+
+
+extension HMHomeFollowController{
+    // 初始化tableview的操作
+    func setupTableView(){
+        tableView.register(UINib.init(nibName: "HMHomeFollowCell", bundle: Bundle.main), forCellReuseIdentifier: "HMHomeFollowCell")
         tableView.separatorStyle = .none
         
+        let header = MJRefreshNormalHeader()
+        header.lastUpdatedTimeLabel?.isHidden = true;
+        header.stateLabel?.isHidden = true
+        header.ignoredScrollViewContentInsetTop = 0
+        header.setRefreshingTarget(self, refreshingAction: #selector(self.headerRefresh))
+        tableView.mj_header = header
+        header.beginRefreshing()
+    }
+    
+    @objc func headerRefresh(){
         // 发送网络请求获取数据
         HMHomeProvider.request(.followList) {result in
             if case let .success(response) = result {
@@ -26,10 +46,13 @@ class HMHomeFollowController: UITableViewController {
                 let json = JSON(data!)
                 self.models = JSONDeserializer<HMHomeFollowModel>.deserializeModelArrayFrom(json: json["content"]["feeds"].description)! as! [HMHomeFollowModel]
                 self.tableView.reloadData()
+                self.tableView.mj_header?.endRefreshing()
             }
         }
-        
-        // 监听图片的点击
+    }
+    
+    func observePhotoClick(){
+        // 监听图片的点击，弹出照片控制器
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "clickPhoto"), object: nil, queue: OperationQueue.main){
             (notification) in
             let dict = notification.userInfo
@@ -42,31 +65,26 @@ class HMHomeFollowController: UITableViewController {
 }
 
 
+// MARK: - tableview数据源方法
+extension HMHomeFollowController{
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return models.count
+    }
+}
+
 // MARK:- 实现tableview代理方法
 extension HMHomeFollowController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! HMHomeFollowCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HMHomeFollowCell", for: indexPath) as! HMHomeFollowCell
         cell.model = models[indexPath.row]
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID) as! HMHomeFollowCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HMHomeFollowCell") as! HMHomeFollowCell
         cell.model = models[indexPath.row]
         cell.layoutIfNeeded()
         return cell.timeLabel.frame.maxY + 35
     }
     
-}
-
-// MARK: - tableview数据源方法
-extension HMHomeFollowController{
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
-    }
 }

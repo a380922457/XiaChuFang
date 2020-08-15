@@ -30,6 +30,12 @@ struct HMRecModel: HandyJSON {
     var image: HMPhoto?
     var author: Dictionary<String, Dictionary<String, String>>?
     var extra: HMExtra?
+    var target_info: Dictionary<String, String>?
+    
+    
+    var id: String?{
+        return target_info?["target_id"]
+    }
     
     var authorName: String?{
         return title_3rd

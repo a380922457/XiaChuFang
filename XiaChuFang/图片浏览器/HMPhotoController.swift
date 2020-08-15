@@ -17,6 +17,8 @@ class HMPhotoController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBAction func clickCancleButton() {
         navigationController?.popViewController(animated: true)
+        
+        // 显示tabbar,navbar
         tabBarController?.tabBar.isHidden = false
         navigationController?.navigationBar.isHidden = false
     }
@@ -30,16 +32,24 @@ class HMPhotoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(HMPhotoCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        (collectionView.collectionViewLayout as! HMPhotoCollectionViewLayout).model = model
-        // 刷新标签
-        collectionView.contentOffset = CGPoint(x: CGFloat(indexPath!.row) * YYScreenWidth, y: 0)
-        scrollViewDidEndDecelerating(collectionView)
+        
+        // 隐藏tabbar,navbar
         navigationController?.navigationBar.isHidden = true
         tabBarController?.tabBar.isHidden = true
         
+        // 设置collectionView
+        collectionView.register(HMPhotoCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: YYScreenWidth, height: YYScreenHeigth)
 
+        
+        // 滚到对应位置
+        collectionView.contentOffset = CGPoint(x: CGFloat(indexPath!.row) * YYScreenWidth, y: 0)
+        
+        // 监听单击图片
+        NotificationCenter.default.addObserver(self, selector: #selector(self.clickCancleButton), name: NSNotification.Name(rawValue: "tapImage"), object: nil)
     }
+    
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .darkContent
     }
@@ -52,26 +62,23 @@ extension HMPhotoController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! HMPhotoCollectionViewCell
-        cell.imageView.kf.setImage(with: URL(string: (model?.imageUrls[indexPath.row])!))
+        cell.imageUrl = model?.imageUrls[indexPath.row]
+        cell.imageRatio = model?.imageRatios[indexPath.row]
+        
         return cell
     }
-    
 }
 
 extension HMPhotoController: UICollectionViewDelegate{
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        clickCancleButton()
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        // 还原图片
+        (cell as! HMPhotoCollectionViewCell).scrollView.zoomScale = 1
+        (cell as! HMPhotoCollectionViewCell).scale = 1.5
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        // 修改标签
-        let cur = Int(collectionView.contentOffset.x / YYScreenWidth) + 1
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        // 更新索引标签
         let total = model?.imageUrls.count
-        pageLabel.text = "\(cur)/\(total!)"
-        
-        // 刷新imageView frame
-        let index = scrollView.contentOffset.x / YYScreenWidth
-        collectionView.cellForItem(at: IndexPath.init(item: Int(index), section: 0))?.layoutSubviews()
-        
+        pageLabel.text = "\(indexPath.row + 1)/\(total!)"
     }
 }

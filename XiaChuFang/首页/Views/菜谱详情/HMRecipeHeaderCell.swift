@@ -28,7 +28,7 @@ class HMRecipeHeaderCell: UITableViewCell{
             
             my_textLabel.text = model?.text
             
-            rateLabel.text = "\(model!.rate ?? "")\(model!.collectionNumber!)收藏 ·  \(model!.viewedNumber!)次浏览"
+            rateLabel.text = "\(model!.rate ?? "")\(model!.collectionNumber!)收藏 •  \(model!.viewedNumber!)次浏览"
             
             vipView.isHidden = !model!.isShowIcon
             
@@ -38,7 +38,7 @@ class HMRecipeHeaderCell: UITableViewCell{
             
             nameWidth.constant = (model?.authorName?.sizeWithText(font: .systemFont(ofSize: 19)).width)! + 10
             
-            collectionNumWidth.constant = (model?.collectionNumber?.sizeWithText(font: .systemFont(ofSize: 13)).width)!
+            collectionNumWidth.constant = (model?.doneNumber?.sizeWithText(font: .systemFont(ofSize: 13)).width)!
             
             collectionContainer.backgroundColor = UIColor.init(r: 120, g: 120, b: 120, alpha: 0.4)
                         

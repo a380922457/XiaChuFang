@@ -20,7 +20,7 @@
                         <constraint firstAttribute="height" constant="300" id="BJ2-Zx-OWS"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.8综合评分 · 2671收藏 · 8.5万次浏览" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOF-T3-vb5">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.8综合评分 • 2671收藏 • 8.5万次浏览" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOF-T3-vb5">
                     <rect key="frame" x="-8.5" y="366.5" width="431" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="Wuw-rh-ymy"/>
@@ -119,6 +119,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2503" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HU-WV-J4P">
                             <rect key="frame" x="23" y="3" width="32" height="17"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="32" id="ndv-7S-Kj8"/>
                             </constraints>
@@ -135,7 +136,7 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="0.51030197538860111" green="0.51030197538860111" blue="0.51030197538860111" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="op4-hl-ud5" firstAttribute="top" secondItem="Kas-rL-mSJ" secondAttribute="top" constant="3" id="E8P-dW-Re6"/>
                         <constraint firstAttribute="height" constant="23" id="Lqn-m5-Rg7"/>
@@ -143,6 +144,7 @@
                         <constraint firstItem="7HU-WV-J4P" firstAttribute="leading" secondItem="op4-hl-ud5" secondAttribute="trailing" constant="1" id="cTp-EN-yPq"/>
                         <constraint firstAttribute="trailing" secondItem="7HU-WV-J4P" secondAttribute="trailing" constant="3" id="caD-7d-4pD"/>
                         <constraint firstItem="7HU-WV-J4P" firstAttribute="top" secondItem="Kas-rL-mSJ" secondAttribute="top" constant="3" id="cdL-EQ-C9X"/>
+                        <constraint firstItem="7HU-WV-J4P" firstAttribute="leading" secondItem="op4-hl-ud5" secondAttribute="trailing" constant="1" id="hKv-Gc-vzR"/>
                         <constraint firstItem="op4-hl-ud5" firstAttribute="leading" secondItem="Kas-rL-mSJ" secondAttribute="leading" constant="6" id="rBw-Wz-VM9"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>

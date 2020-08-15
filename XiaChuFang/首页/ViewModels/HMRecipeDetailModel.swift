@@ -27,8 +27,6 @@ struct HMRecipeDetailModel {
         var likeNumber: String?
     }
     
-    
-    
     var imageUrl: String?
     
     var imageRatio: Float?{
@@ -63,19 +61,24 @@ struct HMRecipeDetailModel {
 
         let jiDoc = Ji(htmlURL: URL(string: url)!)!
         let title = jiDoc.xPath("//h1[@class='page-title']")!.first?.content!
+        
+        // 标题
         model.title = title?.trimmingCharacters(in: ["\n", " "])
         
+        // 配图
         model.imageUrl = jiDoc.xPath("//div[@class='block recipe-show']")?.first?.xPath("div").first?.xPath("img").first?.attributes["src"]
         
+        // 评分，跟做人数
         let span = jiDoc.xPath("//span[@class='number']")!
         if span.count == 2{
             let rate = jiDoc.xPath("//span[@class='number']")![0].content!
-            model.rate = "\(rate)综合评分 · "
+            model.rate = "\(rate)综合评分 • "
             model.doneNumber = jiDoc.xPath("//span[@class='number']")![1].content!
         }else if span.count == 1{
             model.doneNumber = jiDoc.xPath("//span[@class='number']")![0].content!
         }
 
+        // 收藏人数，超过一万改成多少万，浏览人数拿不到，自己瞎造一个
         let collectionNumber = jiDoc.xPath("//div[@class='pv']")?.first?.content
         let collectionNumberDouble = Double(collectionNumber?.split(separator: " ")[0] ?? " ")!
         if collectionNumberDouble > 10000.0{
@@ -86,20 +89,23 @@ struct HMRecipeDetailModel {
             model.viewedNumber =  String(Int(collectionNumberDouble * Double(10 + arc4random() % 5)))
         }
         
-        
+        // 创建时间
         let createTime = jiDoc.xPath("//div[@class='time']")?.first?.content
         model.createTime = String(createTime?.split(separator: " ")[1] ?? " ")
     
-        
+        // 作者名
         let authorName = jiDoc.xPath("//div[@class='author']")?.first?.content
         model.authorName = authorName?.trimmingCharacters(in: ["\n", " "])
         
+        // 作者头像url
         model.authorImageUrl = jiDoc.xPath("//div[@class='author']")?.first?.xPath("a").first?.xPath("img").first?.attributes["src"]
         if let _ = jiDoc.xPath("//a[@class='icon icon-cooker']") {model.isShowIcon = true}
         
+        // 正文
         let text = jiDoc.xPath("//div[@class='desc mt30']")?.first?.content
         model.text = text?.trimmingCharacters(in: ["\n", " "])
         
+        // 小贴士
         model.smallTip = jiDoc.xPath("//div[@class='tip']")?.first?.content?.trimmingCharacters(in: ["\n", " "])
         
         // 原材料

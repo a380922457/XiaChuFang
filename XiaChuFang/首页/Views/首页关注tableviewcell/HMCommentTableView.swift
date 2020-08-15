@@ -38,7 +38,7 @@ class HMCommentTableView: UITableView, UITableViewDelegate, UITableViewDataSourc
                 let sepView = UIView(frame: CGRect(x: 10, y: 0, width: YYScreenWidth - 20, height: 12))
                 let subView = UIView(frame: CGRect(x: 0, y: 0.5, width: YYScreenWidth - 20, height: 0.5))
                 sepView.addSubview(subView)
-                subView.backgroundColor = .lightGray
+                subView.backgroundColor = UIColor.init(r: 225, g: 225, b: 225)
                 tableHeaderView = sepView
             }
             

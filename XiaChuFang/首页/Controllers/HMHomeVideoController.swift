@@ -57,7 +57,7 @@ class HMHomeVideoController: UIViewController {
         header.setRefreshingTarget(self, refreshingAction: #selector(self.headerRefresh))
         (view as! UIScrollView).mj_header = header
         header.beginRefreshing()
-        headerRefresh()
+//        headerRefresh()
         
         // 添加底部刷新控件
         let footer = MJRefreshAutoNormalFooter()

@@ -14,16 +14,19 @@ class HMTabbarController: UITabBarController {
         super.viewDidLoad()
         
         setValue(HMTabBar(), forKey: "tabBar")
-    
+        
         setupUI()
+        
+        tabBarController?.selectedIndex = 3
     }
     
     func setupUI(){
         let titles = ["下厨房", "市集", "课堂", "收藏", "我"]
         let imgs = ["A", "B", "C", "D", "E"]
+        let childs = [HomeController(), HMCollectionController(), HMCollectionController(),  HMCollectionController(), HMMeController()]
         
         for (i, title) in titles.enumerated() {
-            addChildViewController(childVc: HomeController(), title: title, img: "tab" + imgs[i] + "Deselected", selImg: "tab" + imgs[i] + "Selected")
+            addChildViewController(childVc: childs[i], title: title, img: "tab" + imgs[i] + "Deselected", selImg: "tab" + imgs[i] + "Selected")
             
         }
      }

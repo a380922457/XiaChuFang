@@ -23,7 +23,6 @@ class HMRecipeCatogoryController: UIViewController {
         navigationItem.leftBarButtonItem = item
 
         title = "菜谱分类"
-        
 
         let webView = WKWebView.init(frame:self.view.frame)
         webView.navigationDelegate = self
@@ -35,24 +34,15 @@ class HMRecipeCatogoryController: UIViewController {
 }
 
 extension HMRecipeCatogoryController:WKNavigationDelegate{
-    // 页面开始加载时调用
-//    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!){
-//        self.navigationItem.title = "加载中..."
-//        print("didStartProvisionalNavigation")
-//    }
-//    // 当内容开始返回时调用
-//    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!){
-//        print("didCommit")
-//    }
-//    // 页面加载完成之后调用
-//    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!){
-//        print("didFinish")
-//    }
-    
-//    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-//        decisionHandler(.allow)
-//        print(navigationAction.request.url)
-//    }
-    
-    
+    // 拦截请求，跳转到搜索控制器
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        decisionHandler(.allow)
+        let string = navigationAction.request.url!.absoluteString
+        if !string.starts(with: "https://www.xiachufang.com/search"){
+            return
+        }
+        let keyword = string.split(separator: "=")[1].removingPercentEncoding!
+        let vc = HMSearchSecondController(keyword: keyword)
+        navigationController?.pushViewController(vc, animated: false)
+    }
 }

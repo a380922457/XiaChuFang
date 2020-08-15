@@ -11,13 +11,14 @@ import UIKit
 class HMNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 导航条分隔线
         navigationBar.standardAppearance.configureWithTransparentBackground()
 
     }
     
-    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        super.pushViewController(viewController, animated: animated)
-    }
+//    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+//        super.pushViewController(viewController, animated: animated)
+//    }
     
     override var childForStatusBarStyle: UIViewController?{
         return topViewController

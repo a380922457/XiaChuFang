@@ -38,8 +38,7 @@ class HMSearchFirstController: UICollectionViewController {
         layout.popularSearchs = popularSearchs
         
         // 默认搜索红烧肉
-        let titleview = navigationItem.titleView as! HMNavSearchView
-        titleview.searchLabel.text = "红烧肉"
+        (navigationItem.titleView as! HMNavSearchView).searchLabel.text = "红烧肉"
         search()
         
         // 监听清空按钮
@@ -103,9 +102,7 @@ extension HMSearchFirstController{
     // 设置cell数据
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
-        
-//        for sub in cell.contentView.subviews{ sub.removeFromSuperview() }
-        
+                
         var text = ""
         if indexPath.section == 0{
             text = recentSearchs[indexPath.row]
@@ -128,7 +125,7 @@ extension HMSearchFirstController{
         return cell
     }
     
-    // 点击按钮进行搜索
+    // 点击搜索按钮
     @objc func searchWithButton(button: UIButton){
         let text = button.titleLabel!.text!
         titleView?.searchLabel.text = text
@@ -148,7 +145,7 @@ extension HMSearchFirstController: UITextFieldDelegate, HMNavSearchViewDelegate{
     // 点击搜索图标
     func clickSearchButton() {titleView!.searchLabel?.becomeFirstResponder()}
 
-    // 点击返回按钮
+    // 点击return按钮
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         search()
         return true

@@ -76,7 +76,7 @@ class HMHomeRecController: UIViewController {
 }
 
 
-// 实现点击菜谱分类按钮
+// 点击菜谱分类按钮弹出控制器
 extension HMHomeRecController{
     @objc func clickRecipeCatogory(){
      navigationController?.pushViewController(HMRecipeCatogoryController(), animated: false)
@@ -131,7 +131,12 @@ extension HMHomeRecController{
 
 
 extension HMHomeRecController: UICollectionViewDelegate{
-    
+    // 点击cell 弹出菜谱详情
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+        let vc = HMRecipeDetailController.init(id: models[indexPath.row].id!)
+        navigationController?.pushViewController(vc, animated: false)
+    }
 }
 
 // collectionView数据源方法

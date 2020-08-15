@@ -40,8 +40,9 @@ class HMSearchSecondController: UIViewController {
         let right = UIBarButtonItem.init(image: UIImage.init(named: "searchTypeSelect"), style: .plain, target: self, action: #selector(self.filter))
         right.tintColor = .red
         navigationItem.rightBarButtonItem = right
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.backgroundColor = .white
+        
+//        navigationController?.navigationBar.barTintColor = .white
+//        navigationController?.navigationBar.backgroundColor = .white
     }
     
     @objc func back(){
