@@ -31,6 +31,8 @@ class HMPhotoCollectionViewCell: UICollectionViewCell {
         scrollView.maximumZoomScale = 3
         scrollView.minimumZoomScale = 0.5
         scrollView.backgroundColor = .clear
+        
+        scrollView.addSubview(my_imageView)
         return scrollView
     }()
     
@@ -46,7 +48,6 @@ class HMPhotoCollectionViewCell: UICollectionViewCell {
             my_imageView.kf.setImage(with: URL(string: imageUrl!))
             
             contentView.addSubview(scrollView)
-            scrollView.addSubview(my_imageView)
         }
     }
     

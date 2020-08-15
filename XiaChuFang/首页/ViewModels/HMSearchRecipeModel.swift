@@ -12,8 +12,8 @@ import Ji
 
 struct HMSearchRecipeModel {
     var title: String?
-    var rate: String?
-    var number: String?
+    var rate: Float?
+    var number: Int?
     var imageUrl: String?
     var authorImageUrl: String?
     var authorName: String?
@@ -43,10 +43,10 @@ struct HMSearchRecipeModel {
             
             let span = stats[i].xPath("span")
             if span.count == 2{
-                model.number = span[1].content
-                model.rate = span[0].content
+                model.number = Int(span[1].content ?? "0")
+                model.rate = Float(span[0].content ?? "0.0")
             }else if span.count == 1{
-                model.number = span[0].content
+                model.number = Int(span[0].content ?? "0")
             }
 
 

@@ -16,9 +16,9 @@ class HMSearchTableViewCell: UITableViewCell {
             
             my_title.text = model!.title!
             
-            my_rate.text = "\(String(describing: model!.rate ?? "0"))分"
+            my_rate.text = "\(String(describing: model!.rate ?? 0))分"
             
-            my_number.text = "\(String(describing: model!.number ?? "0"))人做过"
+            my_number.text = "\(String(describing: model!.number ?? 0))人做过"
             
             my_author_name.text = model!.authorName!
                         

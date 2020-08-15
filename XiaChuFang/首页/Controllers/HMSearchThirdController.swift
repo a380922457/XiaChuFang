@@ -9,15 +9,23 @@
 import UIKit
 import MJRefresh
 
+enum HMSortedType {
+    case rate
+    case done
+    case smart
+}
+
 class HMSearchThirdController: UITableViewController {
     var models: [HMSearchRecipeModel]?
     var keyword: String?
+    var sortedType: HMSortedType?
     var page = 2
     
     let cellID = "HMSearchTableViewCell"
-    convenience init(keyword: String){
+    convenience init(keyword: String, sortedType: HMSortedType = .smart){
         self.init()
         self.keyword = keyword
+        self.sortedType = sortedType
     }
     
     // 下拉刷新控件
@@ -51,7 +59,14 @@ class HMSearchThirdController: UITableViewController {
     
     @objc func headerRefresh(){
         models = HMSearchRecipeModel.getModels(keyword: keyword!)
-        page = 2
+        models?.sort(by: { (model1, model2) -> Bool in
+            switch sortedType{
+            case .rate: return model1.rate ?? 0 > model2.rate ?? 0
+            case .done: return model1.number ?? 0 > model2.number ?? 0
+            default: return false
+            }
+        })
+        page = 1
         tableView.reloadData()
         tableView.mj_header?.endRefreshing()
     }
@@ -59,7 +74,14 @@ class HMSearchThirdController: UITableViewController {
     @objc func footerRefresh(){
         page += 1
         models! += HMSearchRecipeModel.getModels(keyword: keyword!, page: page)
-
+        models?.sort(by: { (model1, model2) -> Bool in
+            switch sortedType{
+            case .rate: return model1.rate ?? 0 > model2.rate ?? 0
+            case .done: return model1.number ?? 0 > model2.number ?? 0
+            default: return false
+            }
+        })
+        
         tableView.reloadData()
         tableView.mj_footer?.endRefreshing()
     }

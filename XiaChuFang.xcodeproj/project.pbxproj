@@ -70,6 +70,12 @@
 		CB8093E324E6373C001D87F8 /* HMCollectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8093E124E6373C001D87F8 /* HMCollectionController.xib */; };
 		CB8093E624E64395001D87F8 /* HMMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8093E424E64395001D87F8 /* HMMeController.swift */; };
 		CB8093E724E64395001D87F8 /* HMMeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8093E524E64395001D87F8 /* HMMeController.xib */; };
+		CB8093EF24E7CBD5001D87F8 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = CB8093E924E7CBD3001D87F8 /* 1.gif */; };
+		CB8093F024E7CBD5001D87F8 /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = CB8093EA24E7CBD3001D87F8 /* 4.gif */; };
+		CB8093F124E7CBD5001D87F8 /* 5.gif in Resources */ = {isa = PBXBuildFile; fileRef = CB8093EB24E7CBD4001D87F8 /* 5.gif */; };
+		CB8093F224E7CBD5001D87F8 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = CB8093EC24E7CBD4001D87F8 /* 3.gif */; };
+		CB8093F324E7CBD5001D87F8 /* 6.gif in Resources */ = {isa = PBXBuildFile; fileRef = CB8093ED24E7CBD4001D87F8 /* 6.gif */; };
+		CB8093F424E7CBD5001D87F8 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = CB8093EE24E7CBD5001D87F8 /* 2.gif */; };
 		CB847D8C24E0E835004021B3 /* HMRecipeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB847D8B24E0E835004021B3 /* HMRecipeNavigationBar.swift */; };
 		CB847D8E24E0E83B004021B3 /* HMRecipeNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB847D8D24E0E83B004021B3 /* HMRecipeNavigationBar.xib */; };
 		CB847D9124E14969004021B3 /* HMRecipeGradientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB847D8F24E14969004021B3 /* HMRecipeGradientsCell.swift */; };
@@ -153,6 +159,12 @@
 		CB8093E124E6373C001D87F8 /* HMCollectionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMCollectionController.xib; sourceTree = "<group>"; };
 		CB8093E424E64395001D87F8 /* HMMeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMMeController.swift; sourceTree = "<group>"; };
 		CB8093E524E64395001D87F8 /* HMMeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMMeController.xib; sourceTree = "<group>"; };
+		CB8093E924E7CBD3001D87F8 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
+		CB8093EA24E7CBD3001D87F8 /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
+		CB8093EB24E7CBD4001D87F8 /* 5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 5.gif; sourceTree = "<group>"; };
+		CB8093EC24E7CBD4001D87F8 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
+		CB8093ED24E7CBD4001D87F8 /* 6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 6.gif; sourceTree = "<group>"; };
+		CB8093EE24E7CBD5001D87F8 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
 		CB847D8B24E0E835004021B3 /* HMRecipeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeNavigationBar.swift; sourceTree = "<group>"; };
 		CB847D8D24E0E83B004021B3 /* HMRecipeNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMRecipeNavigationBar.xib; sourceTree = "<group>"; };
 		CB847D8F24E14969004021B3 /* HMRecipeGradientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRecipeGradientsCell.swift; sourceTree = "<group>"; };
@@ -200,6 +212,7 @@
 		CB40AA8224D1128A0082F560 = {
 			isa = PBXGroup;
 			children = (
+				CB8093E824E7CBB5001D87F8 /* gifs */,
 				CB40AA8D24D1128A0082F560 /* XiaChuFang */,
 				CB40AA8C24D1128A0082F560 /* Products */,
 				1C96B51466C30EB21890F266 /* Pods */,
@@ -437,6 +450,19 @@
 			path = "首页关注tableviewcell";
 			sourceTree = "<group>";
 		};
+		CB8093E824E7CBB5001D87F8 /* gifs */ = {
+			isa = PBXGroup;
+			children = (
+				CB8093E924E7CBD3001D87F8 /* 1.gif */,
+				CB8093EE24E7CBD5001D87F8 /* 2.gif */,
+				CB8093EC24E7CBD4001D87F8 /* 3.gif */,
+				CB8093EA24E7CBD3001D87F8 /* 4.gif */,
+				CB8093EB24E7CBD4001D87F8 /* 5.gif */,
+				CB8093ED24E7CBD4001D87F8 /* 6.gif */,
+			);
+			path = gifs;
+			sourceTree = "<group>";
+		};
 		CB847D8924E0E7C5004021B3 /* 菜谱详情 */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,12 +470,12 @@
 				CB847D8D24E0E83B004021B3 /* HMRecipeNavigationBar.xib */,
 				CB78BF7724E2B8940082BCF5 /* HMRecipeTabBar.swift */,
 				CB78BF7924E2B89C0082BCF5 /* HMRecipeTabBar.xib */,
-				CB78BF6F24E2971F0082BCF5 /* HMRecipeStepCell.swift */,
-				CB78BF7024E2971F0082BCF5 /* HMRecipeStepCell.xib */,
 				CB52842124DF90A200120A83 /* HMRecipeHeaderCell.swift */,
 				CB52842324DF90A800120A83 /* HMRecipeHeaderCell.xib */,
 				CB847D8F24E14969004021B3 /* HMRecipeGradientsCell.swift */,
 				CB847D9024E14969004021B3 /* HMRecipeGradientsCell.xib */,
+				CB78BF6F24E2971F0082BCF5 /* HMRecipeStepCell.swift */,
+				CB78BF7024E2971F0082BCF5 /* HMRecipeStepCell.xib */,
 				CB78BF7324E2A2BD0082BCF5 /* HMRecipeTipCell.swift */,
 				CB78BF7424E2A2BD0082BCF5 /* HMRecipeTipCell.xib */,
 				CB78BF7B24E2DCF20082BCF5 /* HMRecipeCommentCell.swift */,
@@ -566,10 +592,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8093EF24E7CBD5001D87F8 /* 1.gif in Resources */,
+				CB8093F024E7CBD5001D87F8 /* 4.gif in Resources */,
 				CB52841C24DD144A00120A83 /* HMSearchTableViewCell.xib in Resources */,
 				CB40AA9B24D1128B0082F560 /* LaunchScreen.storyboard in Resources */,
+				CB8093F224E7CBD5001D87F8 /* 3.gif in Resources */,
+				CB8093F324E7CBD5001D87F8 /* 6.gif in Resources */,
 				CB78BF7E24E2DCF20082BCF5 /* HMRecipeCommentCell.xib in Resources */,
 				CB8093E724E64395001D87F8 /* HMMeController.xib in Resources */,
+				CB8093F124E7CBD5001D87F8 /* 5.gif in Resources */,
 				CB54B90524E3E6ED00B64690 /* HMRecipePeopleMakeCollectionCell.xib in Resources */,
 				CB78BF7224E2971F0082BCF5 /* HMRecipeStepCell.xib in Resources */,
 				CB40AA9824D1128B0082F560 /* Assets.xcassets in Resources */,
@@ -582,6 +613,7 @@
 				CB78BF8224E2DDF60082BCF5 /* HMRecipeCommentCell1.xib in Resources */,
 				CB78BF7624E2A2BD0082BCF5 /* HMRecipeTipCell.xib in Resources */,
 				CB8093E324E6373C001D87F8 /* HMCollectionController.xib in Resources */,
+				CB8093F424E7CBD5001D87F8 /* 2.gif in Resources */,
 				CB52842424DF90A800120A83 /* HMRecipeHeaderCell.xib in Resources */,
 				CB54B90124E3D24100B64690 /* HMRecipePeopleCookCell.xib in Resources */,
 				CB40AAE524D113740082F560 /* HMNavSearchView.xib in Resources */,

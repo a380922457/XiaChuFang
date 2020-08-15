@@ -41,8 +41,6 @@ class HMSearchSecondController: UIViewController {
         right.tintColor = .red
         navigationItem.rightBarButtonItem = right
         
-//        navigationController?.navigationBar.barTintColor = .white
-//        navigationController?.navigationBar.backgroundColor = .white
     }
     
     @objc func back(){
@@ -68,8 +66,10 @@ class HMSearchSecondController: UIViewController {
 
         let titles = ["智能排序", "评分最高", "做过最多", "视频菜谱"]
         let vc = HMSearchThirdController.init(keyword: keyword!)
-        
-        let viewControllers:[UIViewController] = [vc, vc, vc, vc]
+        let vcRate = HMSearchThirdController.init(keyword: keyword!, sortedType: .rate)
+        let vcDone = HMSearchThirdController.init(keyword: keyword!, sortedType: .done)
+
+        let viewControllers:[UIViewController] = [vc, vcRate, vcDone, vc]
         for vc in viewControllers{
             addChild(vc)
         }

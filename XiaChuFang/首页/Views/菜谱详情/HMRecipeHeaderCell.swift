@@ -38,7 +38,7 @@ class HMRecipeHeaderCell: UITableViewCell{
             
             nameWidth.constant = (model?.authorName?.sizeWithText(font: .systemFont(ofSize: 19)).width)! + 10
             
-            collectionNumWidth.constant = (model?.doneNumber?.sizeWithText(font: .systemFont(ofSize: 13)).width)!
+            collectionNumWidth.constant = (model?.doneNumber?.sizeWithText(font: .systemFont(ofSize: 13)).width)! + 3
             
             collectionContainer.backgroundColor = UIColor.init(r: 120, g: 120, b: 120, alpha: 0.4)
                         
