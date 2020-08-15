@@ -6,12 +6,17 @@
 
 效果图：  
   
-![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/1.gif)
-![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/2.gif)
-![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/3.gif)
-![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/4.gif)
-![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/5.gif)
-![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/6.gif)
+![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/1.gif)  
+
+![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/2.gif)  
+
+![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/3.gif)  
+
+![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/4.gif)  
+
+![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/5.gif)  
+
+![image](https://github.com/a380922457/XiaChuFang/blob/master/gifs/6.gif)  
 
   
 此项目主要是为了学习和熟悉iOS开发和Swift编程语言而编写的，素材均来自“下厨房”官方App  
