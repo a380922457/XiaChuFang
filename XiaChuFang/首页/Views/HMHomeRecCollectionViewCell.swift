@@ -36,10 +36,10 @@ open class HMHomeRecCollectionViewCell: UICollectionViewCell {
             authorButton.clipsToBounds = true
             
             // 设置收藏数
-            collectNumber.text = model!.extra!.is_video_recipe! ? model?.extra?.extra_icon_value : model?.extra?.n_collects
+            collectNumber.text = model!.extra!.is_video_recipe ?? true ? model?.extra?.extra_icon_value : model?.extra?.n_collects
             
             // 设置是爱心还是大拇指
-            let name = model!.extra!.is_video_recipe! ? "common_like" : "dish_collect"
+            let name = model!.extra!.is_video_recipe ?? true ? "common_like" : "dish_collect"
             collecionButton.setImage(UIImage.init(named: name), for: .normal)
             
             // 显示playButton

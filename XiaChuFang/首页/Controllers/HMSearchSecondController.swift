@@ -68,7 +68,6 @@ class HMSearchSecondController: UIViewController {
         let vc = HMSearchThirdController.init(keyword: keyword!)
         let vcRate = HMSearchThirdController.init(keyword: keyword!, sortedType: .rate)
         let vcDone = HMSearchThirdController.init(keyword: keyword!, sortedType: .done)
-
         let viewControllers:[UIViewController] = [vc, vcRate, vcDone, vc]
         for vc in viewControllers{
             addChild(vc)
