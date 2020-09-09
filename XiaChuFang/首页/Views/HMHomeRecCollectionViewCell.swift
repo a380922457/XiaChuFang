@@ -43,7 +43,7 @@ open class HMHomeRecCollectionViewCell: UICollectionViewCell {
             collecionButton.setImage(UIImage.init(named: name), for: .normal)
             
             // 显示playButton
-            playButton.isHidden = !model!.extra!.is_video_recipe!
+            playButton.isHidden = model!.extra!.is_video_recipe ?? true
             
             // 动态设置imageview高度
             photoHeight.constant = min(photo.frame.size.width * model!.image!.ratio, 200)

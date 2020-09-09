@@ -39,7 +39,10 @@ class HMPhotoController: UIViewController {
         
         // 设置collectionView
         collectionView.register(HMPhotoCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: YYScreenWidth, height: YYScreenHeigth)
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: YYScreenWidth, height: YYScreenHeigth)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
 
         
         // 滚到对应位置

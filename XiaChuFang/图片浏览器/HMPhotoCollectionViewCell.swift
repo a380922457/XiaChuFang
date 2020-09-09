@@ -87,6 +87,5 @@ extension HMPhotoCollectionViewCell: UIScrollViewDelegate{
         my_imageView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY);
         
     }
-    
 }
     

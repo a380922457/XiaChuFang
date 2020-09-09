@@ -9,6 +9,7 @@
 import UIKit
 import IBAnimatable
 
+
 class HMRecipeGradientsCell: UITableViewCell {
 
     var heights = [CGFloat]()
